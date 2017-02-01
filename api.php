@@ -7,9 +7,9 @@
 	include 'header.php';
 ?>
 	<script>
-	
+
 	function cb(){
-		var cb = new ComicBubbles("main-cb", {bubble: 
+		var cb = new ComicBubbles("main-cb", {bubble:
 			{id: 'b1464800593928', name: "aaa", text: "ComicBubbles is\na word bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
 		});
     //var bu = cb.getBubbleById("b1464800593928");
@@ -44,17 +44,17 @@ bubble_settings: Object, optional
   <tr>
     <td>text</td>
     <td>&quot;&quot;</td>
-    <td></td>
+    <td>plain text<br>line break: &quot;\n&quot;</td>
   </tr>
   <tr>
     <td>width</td>
     <td>&quot;140px&quot;</td>
-    <td></td>
+    <td>text field width</td>
   </tr>
   <tr>
     <td>height</td>
     <td>&quot;65px&quot;</td>
-    <td></td>
+    <td>text field height</td>
   </tr>
   <tr>
     <td>fontFamily</td>
@@ -84,12 +84,12 @@ bubble_settings: Object, optional
   <tr>
     <td>background</td>
     <td>&quot;#ffffff&quot;</td>
-    <td></td>
+    <td>hex value</td>
   </tr>
   <tr>
     <td>color</td>
     <td>&quot;#000000&quot;</td>
-    <td></td>
+    <td>hex value</td>
   </tr>
   <tr>
     <td>opacity</td>
@@ -99,12 +99,12 @@ bubble_settings: Object, optional
   <tr>
     <td>readonly</td>
     <td>true</td>
-    <td></td>
+    <td>set to false to enable mouse actions (comicbubbles_editor.js required)</td>
   </tr>
   <tr>
     <td>settable</td>
     <td>true</td>
-    <td></td>
+    <td>set to false to hide 's' button</td>
   </tr>
   <tr>
     <td>bubbleStyle</td>
