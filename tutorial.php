@@ -8,7 +8,7 @@
 ?>
 <script>
 function cb(){
-  new ComicBubbles("main-cb", {bubble: 
+  new ComicBubbles("main-cb", {bubble:
     {id: 'b1464800593928', text: "ComicBubbles is\na word bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
   });
 }
@@ -108,7 +108,7 @@ function teddy(){
     <div class="img">
       <img id="my_image_id" src="boy.jpg" width="360" height="300" onload="teddy();">
     </div>
-    <div id="my_image_id-comic-bubbles-output" class="output"></div>    
+    <div id="my_image_id-comic-bubbles-output" class="output"></div>
     <div class="clear"></div>
   </div>
 </div>

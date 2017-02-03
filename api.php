@@ -124,112 +124,112 @@ bubble_settings: Object, optional
   <tr>
     <td>id</td>
     <td>&quot;b&quot; + new Date().getTime() + number of bubbles</td>
-    <td></td>
+    <td>can be replaced by any string</td>
   </tr>
   <tr>
     <td>name</td>
     <td>&quot;&quot;</td>
-    <td></td>
+    <td>can be any string</td>
   </tr>
   <tr>
     <td>text</td>
     <td>canvas_settings.canvas.text</td>
-    <td></td>
+    <td>plain text<br>line break: &quot;\n&quot;</td>
   </tr>
   <tr>
     <td>x</td>
     <td>&quot;0px&quot;</td>
-    <td></td>
+    <td>text field x coordinate</td>
   </tr>
   <tr>
     <td>y</td>
     <td>&quot;0px&quot;</td>
-    <td></td>
+    <td>text field y coordinate</td>
   </tr>
   <tr>
     <td>width</td>
     <td>canvas_settings.canvas.width</td>
-    <td></td>
+    <td>text field width</td>
   </tr>
   <tr>
     <td>height</td>
     <td>canvas_settings.canvas.height</td>
-    <td></td>
+    <td>text field height</td>
   </tr>
   <tr>
     <td>fontFamily</td>
     <td>canvas_settings.canvas.fontFamily</td>
-    <td></td>
+    <td>valid values:<br>- 'Arial, Helvetica, sans-serif'<br>- '&quot;Arial Black&quot;, Gadget, sans-serif'<br>- '&quot;Comic Sans MS&quot;, cursive, sans-serif'<br>- '&quot;Courier New&quot;, Courier, monospace'<br>- 'Georgia, serif'<br>- 'Impact, Charcoal, sans-serif'<br>- '&quot;Lucida Console&quot;, Monaco, monospace'<br>- '&quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif'<br>- '&quot;Palatino Linotype&quot;, &quot;Book Antiqua&quot;, Palatino, serif'<br>- 'Tahoma, Geneva, sans-serif'<br>- '&quot;Times New Roman&quot;, Times, serif'<br>- '&quot;Trebuchet MS&quot;, Helvetica, sans-serif'<br>- 'Verdana, Geneva, sans-serif'</td>
   </tr>
   <tr>
     <td>fontSize</td>
     <td>canvas_settings.canvas.fontSize</td>
-    <td></td>
+    <td>valid values: integers from 8 to 50</td>
   </tr>
   <tr>
     <td>fontStyle</td>
     <td>canvas_settings.canvas.fontStyle</td>
-    <td></td>
+    <td>&quot;normal&quot; or &quot;italic&quot;</td>
   </tr>
   <tr>
     <td>fontWeight</td>
     <td>canvas_settings.canvas.fontWeight</td>
-    <td></td>
+    <td>&quot;normal&quot; or &quot;bold&quot;</td>
   </tr>
   <tr>
     <td>textAlign</td>
     <td>canvas_settings.canvas.textAlign</td>
-    <td></td>
+    <td>&quot;left&quot; or &quot;center&quot; or &quot;right&quot; or &quot;justify&quot;</td>
   </tr>
   <tr>
     <td>background</td>
     <td>canvas_settings.canvas.background</td>
-    <td></td>
+    <td>hex value</td>
   </tr>
   <tr>
     <td>color</td>
     <td>canvas_settings.canvas.color</td>
-    <td></td>
+    <td>hex value</td>
   </tr>
   <tr>
     <td>opacity</td>
     <td>canvas_settings.canvas.opacity</td>
-    <td></td>
+    <td>0 - 1</td>
   </tr>
   <tr>
     <td>readonly</td>
     <td>canvas_settings.canvas.readonly</td>
-    <td></td>
+    <td>set to false to enable mouse actions (comicbubbles_editor.js required)</td>
   </tr>
   <tr>
     <td>settable</td>
     <td>canvas_settings.canvas.settable</td>
-    <td></td>
+    <td>set to false to hide 's' button</td>
   </tr>
   <tr>
     <td>visible</td>
     <td>true</td>
-    <td></td>
+    <td>set to false to hide bubble</td>
   </tr>
   <tr>
     <td>bubbleStyle</td>
     <td>canvas_settings.canvas.bubbleStyle</td>
-    <td></td>
+    <td>&quot;none&quot; or &quot;speak&quot; or &quot;think&quot; or &quot;scream&quot; or &quot;arrow&quot;</td>
   </tr>
   <tr>
     <td>tailLocation</td>
     <td>&quot;se&quot;</td>
-    <td></td>
+    <td>valid values:<br>&quot;nw&quot;, &quot;n&quot;, &quot;ne&quot;, &quot;e&quot;, &quot;se&quot;, &quot;s&quot;, &quot;sw&quot;, &quot;w&quot;</td>
   </tr>
   <tr>
     <td>tailX</td>
     <td></td>
-    <td></td>
+    <td>tail pointer x coordinate</td>
   </tr>
   <tr>
     <td>tailY</td>
     <td></td>
-    <td></td>
+    <td>tail pointer y coordinate</td>
   </tr>
 </table>
 <br>
