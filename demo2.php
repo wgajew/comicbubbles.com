@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Demo2</title>
+	<title>ComicBubbles - speech bubble JavaScript library</title>
 <?php
 	include 'header.php';
 ?>
@@ -109,8 +109,8 @@ function outputOnOff(b){
 }
 
 function cb(){
-  new ComicBubbles("main-cb", {bubble: 
-    {id: 'b1464800593928', text: "ComicBubbles is\na word bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
+  new ComicBubbles("main-cb", {bubble:
+    {id: 'b1464800593928', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
   });
   sh_highlightDocument();
 }
@@ -235,8 +235,8 @@ camels_cb<wbr>.getBubbleById('b1')<wbr>.show()<wbr>.moveTo(127,15,'fast',functio
 });
 
 }
-</pre>		
-  </div>		
+</pre>
+  </div>
 </div>
 <div class="cb-spacer"></div>
 <?php include 'footer.php'; ?>

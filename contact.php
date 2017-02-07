@@ -1,15 +1,15 @@
 <?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $name = $_POST['name'];  
+  $name = $_POST['name'];
   $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $email = ""; 
+    $email = "";
   }
   $message = $_POST['message'];
   $website = $_POST['website'];
   if ($website == "cb") {
-    if (!empty($name) && !empty($email) && !empty($message)) {      
+    if (!empty($name) && !empty($email) && !empty($message)) {
       $to = "wgajew@yola.pl";
       $subject = "comicbubbles.com";
       $txt = $message;
@@ -30,15 +30,15 @@ else {
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Contact</title>
+	<title>ComicBubbles - speech bubble JavaScript library</title>
 <?php
 	include 'header.php';
 ?>
 <script>
 
 function cb(){
-  var cob = new ComicBubbles("main-cb", {bubble: 
-    {id: 'cob', text: "ComicBubbles is\na word bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
+  var cob = new ComicBubbles("main-cb", {bubble:
+    {id: 'cob', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
   });
 }
 

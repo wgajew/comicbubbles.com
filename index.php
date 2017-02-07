@@ -2,21 +2,18 @@
 <html class="ix">
 <head>
 	<meta charset="utf-8">
-	<title>Word bubble JavaScript library</title>
+	<title>ComicBubbles - speech bubble JavaScript library</title>
 	<link href="comicbubbles.css" rel="stylesheet" >
-	<script>
-
-	</script>
 </head>
 <body class="ix">
 	<div id="index_main">
 		<div>
 			<div class="menu">
-				<a href="demo">demo 1</a><span>|</span><a href="demo2">demo 2</a><span>|</span><a href="demo3">demo 3</a><span>|</span><a href="tutorial">tutorial</a><span>|</span><a href="api">api</a><span>|</span><a href="download">download</a><span>|</span><a href="contact">contact</a>
+				<a href="demo">demo 1</a><span>|</span><a href="demo2">demo 2</a><span>|</span><a href="demo3">demo 3</a><span>|</span><a href="tutorial">tutorial</a><span>|</span><a href="api">api</a><span>|</span><a href="contact">contact</a>
 			</div>
 			<div class="fl">
 			<div class="box"></div>
-			<h1>Add word bubbles to your images with ComicBubbles</h1>
+			<h1>Add speech bubbles to your images with ComicBubbles</h1>
 			<p>
 			ComicBubbles is a JavaScript HTML5 canvas library which provides a simple way for adding speech and thought bubbles to photos and drawings.
 			</p>

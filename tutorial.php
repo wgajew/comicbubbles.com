@@ -2,14 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Tutorial</title>
+	<title>ComicBubbles - speech bubble JavaScript library</title>
 <?php
 	include 'header.php';
 ?>
 <script>
 function cb(){
   new ComicBubbles("main-cb", {bubble:
-    {id: 'b1464800593928', text: "ComicBubbles is\na word bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
+    {id: 'b1464800593928', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
   });
 }
 function teddy(){
@@ -25,7 +25,7 @@ function teddy(){
 <div class="main">
   <h2>1. Adding the library to an HTML page</h2>
   <p>
-  ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding word bubbles to photos. The library consists of two files. The main file - comicbubbles.js - is used to display word bubbles defined as JavaScript objects. Thanks to the other one - comicbubbles_editor.js - you can create and modify bubbles with mouse actions. Both files should be placed inside the &lt;head&gt; section of an HTML page with a &lt;script&gt; tag.
+  ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech bubbles to photos. The library consists of two files. The main file - comicbubbles.js - is used to display speech bubbles defined as JavaScript objects. Thanks to the other one - comicbubbles_editor.js - you can create and modify bubbles with mouse actions. Both files should be placed inside the &lt;head&gt; section of an HTML page with a &lt;script&gt; tag.
   </p>
 <pre>
 &lt;head&gt;

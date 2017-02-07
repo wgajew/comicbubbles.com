@@ -6,6 +6,5 @@
 	<a href="demo3" <?php if($page == "demo3") echo 'class="sel"'; ?>>demo 3</a>
 	<a href="tutorial" <?php if($page == "tutorial") echo 'class="sel"'; ?>>tutorial</a>
 	<a href="api" <?php if($page == "api") echo 'class="sel"'; ?>>api</a>
-	<a href="download" <?php if($page == "download") echo 'class="sel"'; ?>>download</a>
 	<a href="contact" <?php if($page == "contact") echo 'class="sel"'; ?>>contact</a>
 </nav>
