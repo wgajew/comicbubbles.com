@@ -4,7 +4,10 @@
     if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) return true;
   }
 ?>
-
+<title>ComicBubbles - speech bubble JavaScript library</title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
 <link href="sh_peachpuff.css" rel="stylesheet">
 <link href="comicbubbles.css" rel="stylesheet">
 <script src="sh_main.min.js"></script>

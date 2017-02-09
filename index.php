@@ -1,8 +1,10 @@
 <!doctype html>
-<html class="ix">
+<html lang="en" class="ix">
 <head>
-	<meta charset="utf-8">
 	<title>ComicBubbles - speech bubble JavaScript library</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
 	<link href="comicbubbles.css" rel="stylesheet" >
 </head>
 <body class="ix">

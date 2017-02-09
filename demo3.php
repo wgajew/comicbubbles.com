@@ -27,11 +27,9 @@ else {
 ?>
 
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="Cache-control" content="no-cache">
-	<title>ComicBubbles - speech bubble JavaScript library</title>
+<meta http-equiv="Cache-control" content="no-cache">
 <?php
 	include 'header.php';
 ?>
