@@ -21,7 +21,7 @@ background: #f2f2f2;
 #index_main .fl { float: left; width: 369px; height: 470px; background: #fff; border-right: 1px solid #f2f2f2; padding: 0 15px; position: relative; }
 #index_main .fl .box { width: 370px; height: 305px; position: absolute; bottom: 0; left: 0; border-left: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2; }
 #index_main .fl.right { width: 400px; background-image: url("cb_animation_bg.gif"); background-repeat: no-repeat; border-right: 0; padding: 0; }
-#index_main h1 { color: #7e81a8; font-family: Verdana; font-size: 33px; }
+#index_main h1 { color: #7e81a8; font-family: Verdana; font-size: 31px; }
 #index_main p, #index_main ol { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ol { padding: 0 10px 0 18px; line-height: 22px; }
 #index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
