@@ -6,8 +6,8 @@
 ?>
 <title>ComicBubbles - speech bubble JavaScript library</title>
 <meta charset="utf-8">
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="ComicBubbles is a JavaScript library which enables adding speech balloons to photos in a very simple way.">
+<meta name="keywords" content="speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
 <link href="sh_peachpuff.css" rel="stylesheet">
 <link href="comicbubbles.css" rel="stylesheet">
 <script src="sh_main.min.js"></script>
