@@ -7,4 +7,8 @@
 	<a href="tutorial" <?php if($page == "tutorial") echo 'class="sel"'; ?>>tutorial</a>
 	<a href="api" <?php if($page == "api") echo 'class="sel"'; ?>>api</a>
 	<a href="contact" <?php if($page == "contact") echo 'class="sel"'; ?>>contact</a>
+	<div id="download-cb">
+		<h3>download</h3>
+		<a href="comicbubbles.min.zip" class="down" title="comicbubbles.min.zip">comicbubbles.zip</a>
+	</div>
 </nav>

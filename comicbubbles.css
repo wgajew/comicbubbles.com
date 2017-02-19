@@ -27,11 +27,14 @@ background: #f2f2f2;
 #index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
 nav { height: 70px; position: relative; overflow: hidden; background: #485076; }
 #main-cb { width: 180px; height: 70px; float: left; }
+#download-cb { position: absolute; right: 10px; top: 0; height: 70px; text-align: center; }
+#download-cb h3 { margin: 0; padding: 27px 0 0; color: #fff; font-size: 14px; font-family: Verdana; font-weight: bold; letter-spacing: 3px; }
+#download-cb .down { font-size: 13px; color: #fff; }
 nav .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.2; }
-nav a { display: block; padding: 27px 10px 23px 10px; height: 20px; float: left; font-size: 14px; font-family: Verdana; font-weight: bold; color: #fff; text-align: center; text-decoration: none; }
+nav a:not(.down) { display: block; padding: 27px 10px 23px 10px; height: 20px; float: left; font-size: 14px; font-family: Verdana; font-weight: bold; color: #fff; text-align: center; text-decoration: none; }
 nav a:first-child { margin-left: 20px; }
 nav .sel { background: #C8CBD6; color: #485076; opacity: 1; }
-nav a:not(.sel):hover { background: #C8CBD6; color: #485076; }
+nav a:not(.sel):not(.down):hover { background: #C8CBD6; color: #485076; }
 .demo .left { padding: 10px 15px; width: calc(100% - 830px); overflow: auto; margin: auto; }
 .demo .border + .left { width: calc(100% - 831px); }
 .demo .right { float: right; width: 800px; margin: auto; }
@@ -82,7 +85,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 10px 1
 .tutorial h3 { font-size: 18px; margin: 30px 0 10px; }
 .tutorial h4 { font-size: 15px; margin: 20px 0 10px; }
 .tutorial ol { margin: 0; }
-.tutorial ol li { font-size: 15px; } 
+.tutorial ol li { font-size: 15px; }
 #api .main p { font-size: 14px; margin: 0 0 15px; }
 #api h4 { font-size: 15px; margin: 10px 0; }
 #api h4 span { font-size: 10px; font-weight: normal; text-transform: uppercase; margin-left: 5px; }
