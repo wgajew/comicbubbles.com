@@ -496,5 +496,6 @@ event: String, optional
 </p>
 <h4>getBubbleSettings()<span>returns</span><span>Object</span></h4>
 </div>
+<?php include 'footer.php'; ?>
 </body>
 </html>
