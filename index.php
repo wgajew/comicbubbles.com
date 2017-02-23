@@ -11,7 +11,7 @@
 	<div id="index_main">
 		<div>
 			<div class="menu">
-				<a href="demo">demo 1</a><span>|</span><a href="demo2">demo 2</a><span>|</span><a href="demo3">demo 3</a><span>|</span><a href="tutorial">tutorial</a><span>|</span><a href="api">api</a><span>|</span><a href="contact">contact</a>
+				<a href="demo">demo 1</a><span>|</span><a href="demo2">demo 2</a><span>|</span><a href="demo3">demo 3</a><span>|</span><a href="tutorial">tutorial</a><span>|</span><a href="api">api</a><span>|</span><a class="myb" href="my-bubbles">my bubbles</a><span>|</span><a href="contact">contact</a>
 			</div>
 			<div class="fl">
 			<div class="box"></div>
