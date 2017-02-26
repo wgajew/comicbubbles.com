@@ -12,13 +12,32 @@ if (isset($_POST['search-query'])) {
 	}
 	$key = array_rand($images,1);
 	$img = $images[$key];
+	$path = '';
 	if (!getimagesize($img)) $img = $images[array_rand($images,1)];
 	if (getimagesize($img)) {
 		$imageString = file_get_contents($img);
 		$path = 'flickr/'.basename($img);
 		$save = file_put_contents($path, $imageString);
 		$resize = new ResizeImage($path);
-		$resize->resizeTo(800, 800, 'maxWidth');
+		$resize->resizeTo($_POST['image-max-width'], $_POST['image-max-width'], 'maxWidth');
+		$resize->saveImage($path, 90);
+	}
+	echo $path;
+}
+else if (isset($_POST['url-query'])) {
+	require("ResizeImage.php");
+	$path = '';
+	$img = $_POST['url-query'];
+	if (getimagesize($img)) {
+		list($width, $height) = getimagesize($img);
+		$max_width = $_POST['image2-max-width'];
+		if ($width > $max_width) $width = $max_width;
+		if ($height > $max_width) $height = $max_width;
+		$imageString = file_get_contents($img);
+		$path = 'flickr/'.basename($img);
+		$save = file_put_contents($path, $imageString);
+		$resize = new ResizeImage($path);
+		$resize->resizeTo($width, $height, 'maxWidth');
 		$resize->saveImage($path, 90);
 	}
 	echo $path;
@@ -41,8 +60,8 @@ function cb(){
   });
 
   var submit_on_error = true, container = document.getElementById("result-container");
-  function submitForm() {
-    var sForm = document.getElementById("search-form");
+  function submitForm(form_id) {
+    var sForm = document.getElementById(form_id);
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
       var img = document.createElement("img");
@@ -50,15 +69,16 @@ function cb(){
       img.style.display = "none";
       img.onload = function() {
         container.innerHTML = "";
-        container.className = "";
+				container.className = "";
         container.appendChild(img);
         img.style.display = "inline";
+				container.style.width = img.width + "px";
         flickr_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false}});
       }
       img.onerror = function() {
         if (submit_on_error) {
           console.log('1st submit error');
-          document.getElementById("search-error").value = xhr.responseText;
+          sForm.value = xhr.responseText;
           setTimeout(function(){ if (document.getElementsByClassName("error").length == 0) submitForm(); }, 1000);
           submit_on_error = false;
         }
@@ -75,17 +95,26 @@ function cb(){
   document.getElementById("search-form").onsubmit = function(e) {
     e.preventDefault();
     submit_on_error = true;
+		document.getElementById("image-max-width").value = container.offsetWidth;
     document.getElementById("search-error").value = "";
+		container.innerHTML = "";
+		container.className = "empty";
     if (document.getElementById("search-query").value.length < 2) return;
-    container.className = "bg";
     container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
-    var submit_timeout;
-    setTimeout(function(){
-      //if (document.getElementsByClassName("load-container").length > 0) container.innerHTML = "<p class='error'>Error. Try again</p>";
-    }, 15000);
-    submitForm();
+    submitForm("search-form");
   }
+	document.getElementById("url-form").onsubmit = function(e) {
+		e.preventDefault();
+		document.getElementById("image2-max-width").value = container.offsetWidth;
+		container.innerHTML = "";
+		container.className = "empty";
+		if (document.getElementById("url-query").value.length < 2) return;
+		container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
+		submitForm("url-form");
+	}
 
+	document.getElementById("image-max-width").value = container.offsetWidth;
+	document.getElementById("image2-max-width").value = container.offsetWidth;
   sh_highlightDocument();
 }
 
@@ -117,28 +146,29 @@ function save(comicbubbles_object,updateImage){
 
 </script>
 </head>
-<body onload="cb()">
+<body class="my" onload="cb()">
 <?php
 	$page = "my-bubble";
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
-  <h2>Downloading images with bubbles</h2>
-  <div class="right">
-    <div id="result-container" class="bg"></div>
-  </div>
-  <div class="left">
+  <h2>Add speech balloons to your photos!</h2>
+	<div class="left">
     <form id="search-form" action="my-bubbles.php" method="post">
       <input type="text" id="search-query" name="search-query" autocomplete="off">
       <input type="hidden" id="search-error" name="search-error" value="">
+			<input type="hidden" id="image-max-width" name="image-max-width" value="">
       <input type="submit" id="query-submit" value="Flickr Search">
     </form>
-    <br>
-    <button type="button" id="download1" onclick="save(flickr_comicbubbles)">download image</button>
+		<form id="url-form" action="my-bubbles.php" method="post">
+      <input type="text" id="url-query" name="url-query" autocomplete="off">
+			<input type="hidden" id="image2-max-width" name="image2-max-width" value="">
+      <input type="submit" id="url-submit" value="Load from URL">
+    </form>
+		<button type="button" id="download1" onclick="save(flickr_comicbubbles)">download image</button>
   </div>
-  <div class="clear"></div>
+  <div id="result-container" class="empty"></div>
 </div>
-<div class="cb-spacer"></div>
 <?php include 'footer.php'; ?>
 </body>
 </html>

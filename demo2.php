@@ -36,20 +36,20 @@ function vegetables(){
   v7.onMouseEvent(function(){ checkAnswer(v7); });
   v8.onMouseEvent(function(){ checkAnswer(v8); });
   function checkAnswer(bubble){
-    var name = v[click];
-    click++;
+    var name = v[click++];
     if (click < 8) {
-      if (click < 7) q1.setName(v[click]).setText("Which is\n'"+v[click]+"' ?");
       if (bubble.getName() == name) {
         bubble.offMouseEvent().setColor("#0000cd").setText(name, function(){
           if (click == 7) finishTest();
         });
       }
       else {
-        bubble.setColor("#ff0000", function(){
+        bubble.setColor("#ff0000");
+				q1.setColor('#ff0000').setText("wrong\nanswer!").delay(1000, function(){
           if (click == 7) finishTest();
         });
       }
+			if (click < 7) q1.setName(v[click]).setColor('#ffd700').setText("Which is\n'"+v[click]+"' ?");
     }
   }
   function finishTest(){
@@ -65,13 +65,13 @@ function vegetables(){
 
 var camels_cb;
 function camels(){
-  camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia, serif', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6}}, {bubble: [
-  {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', bubbleStyle: 'arrow', tailLocation: 's', tailX: 173, tailY: 83},
-  {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', bubbleStyle: 'arrow', tailLocation: 's', tailX: 283, tailY: 83},
-  {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, bubbleStyle: 'arrow', tailLocation: 's', tailX: 353, tailY: 130},
-  {id: 'b4', text: "My brother", x: 420, y: 20, width: 91, height: 21, background: '#ffff00', bubbleStyle: 'arrow', tailLocation: 's', tailX: 466, tailY: 83},
-  {id: 'b5', text: "My sister", x: 535, y: 20, width: 91, height: 21, background: '#ff1493', bubbleStyle: 'arrow', tailLocation: 's', tailX: 581, tailY: 83},
-  {id: 'b6', text: "My brother", x: 690, y: 20, width: 91, height: 21, background: '#b22222', bubbleStyle: 'arrow', tailLocation: 's', tailX: 736, tailY: 83}
+  camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia, serif', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
+  {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', tailLocation: 's', tailX: 173, tailY: 83},
+  {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', tailLocation: 's', tailX: 283, tailY: 83},
+  {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, tailLocation: 's', tailX: 353, tailY: 130},
+  {id: 'b4', text: "My brother", x: 420, y: 20, width: 91, height: 21, background: '#ffff00', tailLocation: 's', tailX: 466, tailY: 83},
+  {id: 'b5', text: "My sister", x: 535, y: 20, width: 91, height: 21, background: '#ff1493', tailLocation: 's', tailX: 581, tailY: 83},
+  {id: 'b6', text: "My brother", x: 690, y: 20, width: 91, height: 21, background: '#b22222', tailLocation: 's', tailX: 736, tailY: 83}
   ]});
 }
 function my_family(){
@@ -133,7 +133,7 @@ function cb(){
 function <button id="btn5" onclick="vegetables()">vegetables()</button>{
 
 var vegetables_cb, click = 0,
-	v = ["seler", "marchew", "burak", "pietruszka", "ziemniak", "czosnek", "cebula"]<wbr>.sort(function(){ return .5 - Math.random(); });
+    v = ["seler", "marchew", "burak", "pietruszka", "ziemniak", "czosnek", "cebula"]<wbr>.sort(function(){ return .5 - Math.random(); });
 
 vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, fontSize: '22px', fontWeight: 'bold', textAlign: 'center', color: '#8b0000', bubbleStyle: 'arrow'}}, {bubble: [
 	{id: 'v1', name: "kalarepa", text: "kalarepa", x: 35, y: 70, color: '#0000cd', tailLocation: 'se', tailX: 216, tailY: 205},
@@ -147,14 +147,14 @@ vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, font
 	{id: 'q1', name: v[click], text: "Which is\n'"+v[click]+"' ?", x: 296, y: 45, width: 218, height: 81, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '27px', background: '#000000', color: '#ffff00', opacity: 0.5, bubbleStyle: 'speak', tailLocation: 'n', tailX: 436, tailY: 3}
 ]});
 
-v2 = vegetables_cb<wbr>.getBubbleById('v2'),
-v3 = vegetables_cb<wbr>.getBubbleById('v3'),
-v4 = vegetables_cb<wbr>.getBubbleById('v4'),
-v5 = vegetables_cb<wbr>.getBubbleById('v5'),
-v6 = vegetables_cb<wbr>.getBubbleById('v6'),
-v7 = vegetables_cb<wbr>.getBubbleById('v7'),
-v8 = vegetables_cb<wbr>.getBubbleById('v8'),
-q1 = vegetables_cb<wbr>.getBubbleById('q1');
+var v2 = vegetables_cb<wbr>.getBubbleById('v2'),
+    v3 = vegetables_cb<wbr>.getBubbleById('v3'),
+    v4 = vegetables_cb<wbr>.getBubbleById('v4'),
+    v5 = vegetables_cb<wbr>.getBubbleById('v5'),
+    v6 = vegetables_cb<wbr>.getBubbleById('v6'),
+    v7 = vegetables_cb<wbr>.getBubbleById('v7'),
+    v8 = vegetables_cb<wbr>.getBubbleById('v8'),
+    q1 = vegetables_cb<wbr>.getBubbleById('q1');
 
 v2<wbr>.onMouseEvent(function(){ checkAnswer(v2); });
 v3<wbr>.onMouseEvent(function(){ checkAnswer(v3); });
@@ -165,22 +165,23 @@ v7<wbr>.onMouseEvent(function(){ checkAnswer(v7); });
 v8<wbr>.onMouseEvent(function(){ checkAnswer(v8); });
 
 function checkAnswer(bubble){
-	var name = v[click];
-	click++;
-	if (click < 8) {
-		if (click < 7) q1<wbr>.setName(v[click])<wbr>.setText("Which is\n'"+v[click]+"' ?");
-		if (bubble.getName() == name) {
-			bubble<wbr>.offMouseEvent()<wbr>.setColor("#0000cd")<wbr>.setText(name, function(){
-				if (click == 7) finishTest();
-			});
-		}
-		else {
-			bubble<wbr>.setColor("#ff0000", function(){
-				if (click == 7) finishTest();
-			});
-		}
-	}
+  var name = v[click++];
+  if (click < 8) {
+    if (bubble.getName() == name) {
+      bubble.offMouseEvent().setColor("#0000cd").setText(name, function(){
+        if (click == 7) finishTest();
+      });
+    }
+    else {
+      bubble.setColor("#ff0000");
+			q1.setColor('#ff0000').setText("wrong\nanswer!").delay(1000, function(){
+        if (click == 7) finishTest();
+      });
+    }
+		if (click < 7) q1.setName(v[click]).setColor('#ffd700').setText("Which is\n'"+v[click]+"' ?");
+  }
 }
+
 function finishTest(){
 	q1<wbr>.setText("You have no\nmore clicks");
 	var bubbles = vegetables_cb<wbr>.getAllBubbles();
@@ -203,13 +204,13 @@ function finishTest(){
   </div>
   <div class="left">
 <pre class="sh_javascript_dom">
-var camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia, serif', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6}}, {bubble: [
-  {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', bubbleStyle: 'arrow', tailLocation: 's', tailX: 173, tailY: 83},
-  {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', bubbleStyle: 'arrow', tailLocation: 's', tailX: 283, tailY: 83},
-  {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, bubbleStyle: 'arrow', tailLocation: 's', tailX: 353, tailY: 130},
-  {id: 'b4', text: "My brother", x: 420, y: 20, width: 91, height: 21, background: '#ffff00', bubbleStyle: 'arrow', tailLocation: 's', tailX: 466, tailY: 83},
-  {id: 'b5', text: "My sister", x: 535, y: 20, width: 91, height: 21, background: '#ff1493', bubbleStyle: 'arrow', tailLocation: 's', tailX: 581, tailY: 83},
-  {id: 'b6', text: "My brother", x: 690, y: 20, width: 91, height: 21, background: '#b22222', bubbleStyle: 'arrow', tailLocation: 's', tailX: 736, tailY: 83}
+var camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia, serif', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
+  {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', tailLocation: 's', tailX: 173, tailY: 83},
+  {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', tailLocation: 's', tailX: 283, tailY: 83},
+  {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, tailLocation: 's', tailX: 353, tailY: 130},
+  {id: 'b4', text: "My brother", x: 420, y: 20, width: 91, height: 21, background: '#ffff00', tailLocation: 's', tailX: 466, tailY: 83},
+  {id: 'b5', text: "My sister", x: 535, y: 20, width: 91, height: 21, background: '#ff1493', tailLocation: 's', tailX: 581, tailY: 83},
+  {id: 'b6', text: "My brother", x: 690, y: 20, width: 91, height: 21, background: '#b22222', tailLocation: 's', tailX: 736, tailY: 83}
 ]});
 
 function <button id="btn4" onclick="my_family()">my_family()</button>{

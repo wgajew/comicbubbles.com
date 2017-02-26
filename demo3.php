@@ -115,11 +115,9 @@ var bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'aut
 bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#8b4513', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
 bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
 
-var b = bedouin_cb.getBubbleById('bedouin1'),
-  	c = bedouin_cb.getBubbleById('camel1'),
-		im = document.getElementById("pict8"),
-		im_loader = document.getElementById("img-loader"),
-		saving;
+var b = bedouin_cb.getBubbleById('bedouin1'), c = bedouin_cb.getBubbleById('camel1'),
+    im = document.getElementById("pict8"), im_loader = document.getElementById("img-loader"),
+    saving;
 
 b.delay(2000).show(function(){
   c.delay(2000).show();

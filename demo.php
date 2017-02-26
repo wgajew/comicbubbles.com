@@ -113,31 +113,31 @@ function cb(){
 function <button id="btn1" onclick="people()">people()</button>{
 
 var people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: '"Comic Sans MS", cursive, sans-serif', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', color: '#483d8b'}}, {bubble: [
-	{id: 'bub1', text: "Tell us more about it", x: 242, y: 391, width: 130, height: 109, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
-	{id: 'bub2', text: "I'm not that type of person", x: 354, y: 279, width: 184, height: 79, bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
-	{id: 'bub3', text: "He's so\nshy..", x: 646, y: 25, width: 94, height: 62, fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
+  {id: 'bub1', text: "Tell us more about it", x: 242, y: 391, width: 130, height: 109, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
+  {id: 'bub2', text: "I'm not that type of person", x: 354, y: 279, width: 184, height: 79, bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
+  {id: 'bub3', text: "He's so\nshy..", x: 646, y: 25, width: 94, height: 62, fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
 ]});
 
 people_cb<wbr>.addBubble({id: 'next1', text: "NEXT", x: 684, y: 466, width: 88, height: 38, fontFamily: '"Arial Black", Gadget, sans-serif', background: '#ff4500', color: '#ffdab9', opacity: 1, bubbleStyle: 'arrow', tailLocation: 'e', tailX: 793, tailY: 485, visible: false});
 
 var bub1 = people_cb<wbr>.getBubbleById('bub1'),
-	bub2 = people_cb<wbr>.getBubbleById('bub2'),
-	bub3 = people_cb<wbr>.getBubbleById('bub3'),
-	next1 = people_cb<wbr>.getBubbleById('next1');
+    bub2 = people_cb<wbr>.getBubbleById('bub2'),
+    bub3 = people_cb<wbr>.getBubbleById('bub3'),
+    next1 = people_cb<wbr>.getBubbleById('next1');
 
 bub1<wbr>.delay(1000)<wbr>.fadeIn();
 bub2<wbr>.delay(3000)<wbr>.fadeIn();
 bub3<wbr>.delay(5000)<wbr>.fadeIn(function(){ next1<wbr>.show(); });
 
 next1<wbr>.onMouseEvent(function(){
-	next1<wbr>.delay(100)<wbr>.remove();
-	bub1<wbr>.hide()<wbr>.setText("C'mon,\nwe want details!")<wbr>.setX(249)<wbr>.setY(373)<wbr>.setWidth(115)<wbr>.setHeight(109)<wbr>.setTailLocation('nw')<wbr>.setTailX(208)<wbr>.setTailY(328)<wbr>.delay(2000)<wbr>.fadeIn(200);
-	bub2<wbr>.hide()<wbr>.setText("Don't be\nso shy!")<wbr>.setX(443)<wbr>.setY(373)<wbr>.setWidth(117)<wbr>.setHeight(77)<wbr>.setTailLocation('ne')<wbr>.setTailX(597)<wbr>.setTailY(314)<wbr>.delay(200)<wbr>.fadeIn();
-	bub3<wbr>.hide()<wbr>.setText("To tell or\nnot to tell?..")<wbr>.setX(166)<wbr>.setY(8)<wbr>.setWidth('auto')<wbr>.setHeight('auto')<wbr>.setFontSize('19px')<wbr>.setFontWeight('normal')<wbr>.setOpacity(0.6)<wbr>.setTailLocation('se')<wbr>.setTailX(357)<wbr>.setTailY(80)<wbr>.delay(4000)<wbr>.fadeIn(function(){
-		people_cb<wbr>.setReadonly(false);
-		bub1<wbr>.setReadonly(false);
-		bub2<wbr>.setReadonly(false);
-		bub3<wbr>.setReadonly(false);
+  next1<wbr>.delay(100)<wbr>.remove();
+  bub1<wbr>.hide()<wbr>.setText("C'mon,\nwe want details!")<wbr>.setX(249)<wbr>.setY(373)<wbr>.setWidth(115)<wbr>.setHeight(109)<wbr>.setTailLocation('nw')<wbr>.setTailX(208)<wbr>.setTailY(328)<wbr>.delay(2000)<wbr>.fadeIn(200);
+  bub2<wbr>.hide()<wbr>.setText("Don't be\nso shy!")<wbr>.setX(443)<wbr>.setY(373)<wbr>.setWidth(117)<wbr>.setHeight(77)<wbr>.setTailLocation('ne')<wbr>.setTailX(597)<wbr>.setTailY(314)<wbr>.delay(200)<wbr>.fadeIn();
+  bub3<wbr>.hide()<wbr>.setText("To tell or\nnot to tell?..")<wbr>.setX(166)<wbr>.setY(8)<wbr>.setWidth('auto')<wbr>.setHeight('auto')<wbr>.setFontSize('19px')<wbr>.setFontWeight('normal')<wbr>.setOpacity(0.6)<wbr>.setTailLocation('se')<wbr>.setTailX(357)<wbr>.setTailY(80)<wbr>.delay(4000)<wbr>.fadeIn(function(){
+    people_cb<wbr>.setReadonly(false);
+    bub1<wbr>.setReadonly(false);
+    bub2<wbr>.setReadonly(false);
+    bub3<wbr>.setReadonly(false);
 	});
 });
 
@@ -157,21 +157,21 @@ next1<wbr>.onMouseEvent(function(){
 function <button id="btn2" onclick="dog_and_cat()">dog_and_cat()</button>{
 
 var dog_cat_cb = new ComicBubbles("pict2"),
-	animals = ['BEAR', 'PIG', 'DEER', 'LION', 'HORSE', 'SNAKE', 'BIRD', 'FISH', 'COW', 'CAT', 'DOG'];
+    animals = ['BEAR', 'PIG', 'DEER', 'LION', 'HORSE', 'SNAKE', 'BIRD', 'FISH', 'COW', 'CAT', 'DOG'];
 
 dog_cat_cb<wbr>.addBubble({id: 'bub1', text: "I'm\na happy\n"+animals[0], x: 93, y: 275, width: 64, height: 66, textAlign: 'center', background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
 dog_cat_cb<wbr>.addBubble({id: 'bub2', text: "crazy?", x: 342, y: 114, width: 54, height: 28, fontSize: '17px', textAlign: 'center', background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
 dog_cat_cb<wbr>.addBubble({id: 'bub3', text: "I'm\na happy\n"+animals[10], x: 427, y: 336, width: 64, height: 66, textAlign: 'center', background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
 
 var bub1 = dog_cat_cb<wbr>.getBubbleById('bub1'),
-	bub2 = dog_cat_cb<wbr>.getBubbleById('bub2'),
-	bub3 = dog_cat_cb<wbr>.getBubbleById('bub3');
+    bub2 = dog_cat_cb<wbr>.getBubbleById('bub2'),
+    bub3 = dog_cat_cb<wbr>.getBubbleById('bub3');
 
 bub1<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[1], function(){
-	bub2<wbr>.fadeIn(1000)<wbr>.delay(2000)<wbr>.fadeOut(1000)<wbr>.remove(function(){ bub3<wbr>.fadeIn(); });
+  bub2<wbr>.fadeIn(1000)<wbr>.delay(2000)<wbr>.fadeOut(1000)<wbr>.remove(function(){ bub3<wbr>.fadeIn(); });
 })<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[2])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[3])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[4])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[5])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[6])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[7])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[8])<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[9])<wbr>.delay(1500, function(){
-	bub1<wbr>.setTailX(142)<wbr>.setTailY(290)<wbr>.moveTo(427,336,'fast')<wbr>.setTailLocation('nw')<wbr>.setTailX(413)<wbr>.setTailY(328)<wbr>.setReadonly(false);
-	bub3<wbr>.setTailX(467)<wbr>.setTailY(347)<wbr>.moveTo(93,275,'fast')<wbr>.setTailLocation('n')<wbr>.setTailX(138)<wbr>.setTailY(223);
+  bub1<wbr>.setTailX(142)<wbr>.setTailY(290)<wbr>.moveTo(427,336,'fast')<wbr>.setTailLocation('nw')<wbr>.setTailX(413)<wbr>.setTailY(328)<wbr>.setReadonly(false);
+  bub3<wbr>.setTailX(467)<wbr>.setTailY(347)<wbr>.moveTo(93,275,'fast')<wbr>.setTailLocation('n')<wbr>.setTailX(138)<wbr>.setTailY(223);
 });
 
 }
@@ -179,14 +179,14 @@ bub1<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[1], function(){
 <pre class="sh_javascript_dom">
 
 
-var bear_cb = new ComicBubbles("pict3",{bubble:
-	{id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: '"Comic Sans MS", cursive, sans-serif', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
+var bear_cb = new ComicBubbles("pict3", {bubble:
+  {id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: '"Comic Sans MS", cursive, sans-serif', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
 });
 function <button id="btn3" onclick="roar()">roar()</button>{
 
 var bear1 = bear_cb<wbr>.getBubbleById('bear1'),
-	bg = bear1<wbr>.getBackground(),
-	col = bear1<wbr>.getColor();
+    bg = bear1<wbr>.getBackground(),
+    col = bear1<wbr>.getColor();
 
 bear1<wbr>.hide()<wbr>.setBackground(col)<wbr>.setColor(bg)<wbr>.fadeIn(150)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(70)<wbr>.setY(262)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(70)<wbr>.setY(262)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(70)<wbr>.setY(262)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(261)<wbr>.delay(50)<wbr>.setX(69)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(71)<wbr>.setY(263)<wbr>.delay(50)<wbr>.setX(70)<wbr>.setY(262);
 

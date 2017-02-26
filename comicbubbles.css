@@ -1,6 +1,6 @@
-html:not(.ix) { background: #f2f2f2; }
 html.ix { height: 100%; }
 body { margin: 0; }
+body:not(.ix):not(.my) { background: #f2f2f2; }
 body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 .demo .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.5; }
 .demo, .cb-spacer, .contact > div { max-width: 1600px; margin: auto; width: 100%; background: #fff; }
@@ -30,11 +30,10 @@ nav a:not(.down) { display: block; padding: 27px 10px 23px 10px; height: 20px; f
 nav a:first-child { margin-left: 20px; }
 nav#main-menu > .sel { background: #C8CBD6; color: #485076; opacity: 1; }
 nav a:not(.sel):not(.down):hover { background: #C8CBD6; color: #fff; }
-.demo .left { padding: 10px 15px; width: calc(100% - 830px); overflow: auto; margin: auto; }
-.demo .border + .left { width: calc(100% - 831px); }
+.demo .left { padding: 10px 15px; overflow: auto; margin: auto; }
 .demo .right { float: right; width: 800px; margin: auto; }
 .demo .clear { clear: both; }
-.cb-spacer { height: 51px; }
+.cb-spacer { height: 30px; }
 .right img { float: left; }
 #first-demo .left { height: 505px; padding-top: 15px; background: #fff; }
 #first-demo .right { height: 530px; position: relative; }
@@ -53,10 +52,11 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #fifth-demo .right { width: 800px; height: 356px; position: relative; float: none; padding: 10px 0 40px; }
 #fifth-demo .right .img { width: 399px; height: 356px; float: left; position: relative; }
 #fifth-demo .right .img > p { width: 398px; text-align: center; position: absolute; left: 0; bottom: -45px; font: 15px Verdana; }
-#fifth-demo pre { font-size: 13px; }
+#fifth-demo pre { font-size: 14px; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
-#sixth-demo .right { min-height: 400px; position: relative; }
-.bg { background: #D5D7E5; height: calc(100vh - 172px); }
+#sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }
+#result-container { width: 1280px; margin: auto; position: relative; }
+#result-container.empty { background: #D5D7E5; height: calc(100vh - 205px); min-width: 1280px; }
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
@@ -95,6 +95,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 #main-menu a.myb { color: #fff49e; }
 #main-menu a.myb.sel { color: #485076; }
 #fifth-demo-output-btn { position: static; }
+#search-form, #url-form { width: 310px; float: left; }
 
 .load-container {
 	width: 200px;
@@ -182,11 +183,20 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 @media screen and (min-width: 1600px) {
 	pre { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
 }
+@media screen and (max-width: 1280px) {
+	#result-container { width: 1024px; }
+	#result-container.empty { min-width: 1024px; }
+}
 @media screen and (max-width: 1152px) {
 	pre { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; max-width: none; width: calc(100% - 20px); }
 	.demo .right { float: none; }
 	.demo .left { width: calc(100% - 30px); min-width: 770px; overflow: visible; }
 	#first-demo .left, #second-demo .left, #third-demo .left, #fourth-demo .left, #fifth-demo .left, #sixth-demo .left { height: auto; }
-	#first-demo-output-btn, #fourth-demo-output-btn, #fifth-demo-output-btn { right: 680px; }
+	#first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { right: 680px; top: -30px; }
 	#main-cb { display: none; }
+	#first-demo .right, #third-demo .right { margin-top: 30px; }
+}
+@media screen and (max-width: 1024px) {
+	#result-container { width: 800px; }
+	#result-container.empty { min-width: 800px; }
 }
