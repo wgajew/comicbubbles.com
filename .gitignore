@@ -3,8 +3,8 @@ comicbubbles_editor.js
 comicbubbles.min.zip
 cb_images/*
 !cb_images/.gitkeep
-flickr/*
-!flickr/.gitkeep
+my_images/*
+!my_images/.gitkeep
 img/*
 !img/.gitkeep
 .htaccess

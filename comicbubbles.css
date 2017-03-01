@@ -1,6 +1,6 @@
 html.ix { height: 100%; }
 body { margin: 0; }
-body:not(.ix):not(.my) { background: #f2f2f2; }
+body:not(.ix) { background: #f2f2f2; }
 body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 .demo .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.5; }
 .demo, .cb-spacer, .contact > div { max-width: 1600px; margin: auto; width: 100%; background: #fff; }
@@ -54,9 +54,11 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #fifth-demo .right .img > p { width: 398px; text-align: center; position: absolute; left: 0; bottom: -45px; font: 15px Verdana; }
 #fifth-demo pre { font-size: 14px; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
+#sixth-demo { background: #f2f2f2; }
 #sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }
 #result-container { width: 1280px; margin: auto; position: relative; }
 #result-container.empty { background: #D5D7E5; height: calc(100vh - 205px); min-width: 1280px; }
+#result-container .error { font: 12px Verdana; color: red; }
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
@@ -95,7 +97,8 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 #main-menu a.myb { color: #fff49e; }
 #main-menu a.myb.sel { color: #485076; }
 #fifth-demo-output-btn { position: static; }
-#search-form, #url-form { width: 310px; float: left; }
+#search-form, #url-form, #file-form { float: left; margin-left: 15px; }
+#download1 { margin-left: 20px; }
 
 .load-container {
 	width: 200px;

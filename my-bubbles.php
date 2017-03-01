@@ -16,11 +16,24 @@ if (isset($_POST['search-query'])) {
 	if (!getimagesize($img)) $img = $images[array_rand($images,1)];
 	if (getimagesize($img)) {
 		$imageString = file_get_contents($img);
-		$path = 'flickr/'.basename($img);
+		$path = 'my_images/'.basename($img);
 		$save = file_put_contents($path, $imageString);
-		$resize = new ResizeImage($path);
-		$resize->resizeTo($_POST['image-max-width'], $_POST['image-max-width'], 'maxWidth');
-		$resize->saveImage($path, 90);
+		list($width, $height) = getimagesize($img);
+		$max_width = $_POST['image-max-width'];
+		$resizing = false;
+		if ($width > $max_width) {
+			$width = $max_width;
+			$resizing = true;
+		}
+		if ($height > $max_width) {
+			$height = $max_width;
+			$resizing = true;
+		}
+		if ($resizing) {
+			$resize = new ResizeImage($path);
+			$resize->resizeTo($width, $height, 'maxWidth');
+			$resize->saveImage($path, 90);
+		}
 	}
 	echo $path;
 }
@@ -29,16 +42,58 @@ else if (isset($_POST['url-query'])) {
 	$path = '';
 	$img = $_POST['url-query'];
 	if (getimagesize($img)) {
-		list($width, $height) = getimagesize($img);
-		$max_width = $_POST['image2-max-width'];
-		if ($width > $max_width) $width = $max_width;
-		if ($height > $max_width) $height = $max_width;
 		$imageString = file_get_contents($img);
-		$path = 'flickr/'.basename($img);
+		$path = 'my_images/'.basename($img);
 		$save = file_put_contents($path, $imageString);
-		$resize = new ResizeImage($path);
-		$resize->resizeTo($width, $height, 'maxWidth');
-		$resize->saveImage($path, 90);
+		list($width, $height) = getimagesize($img);
+		$max_width = $_POST['image-max-width'];
+		$resizing = false;
+		if ($width > $max_width) {
+			$width = $max_width;
+			$resizing = true;
+		}
+		if ($height > $max_width) {
+			$height = $max_width;
+			$resizing = true;
+		}
+		if ($resizing) {
+			$resize = new ResizeImage($path);
+			$resize->resizeTo($width, $height, 'maxWidth');
+			$resize->saveImage($path, 90);
+		}
+	}
+	echo $path;
+}
+else if (isset($_POST["upload"])) {
+	require("ResizeImage.php");
+	$path = 'my_images/'.basename($_FILES["image_file"]["name"]);
+	$allow = array("jpg", "jpeg", "gif", "png");
+	$info = explode('.', strtolower( $_FILES['image_file']['name']) );
+	if (in_array(end($info), $allow)) {
+		if (move_uploaded_file($_FILES['image_file']['tmp_name'], $path) && getimagesize($path)) {
+			list($width, $height) = getimagesize($path);
+			$max_width = $_POST['image-max-width'];
+			$resizing = false;
+			if ($width > $max_width) {
+				$width = $max_width;
+				$resizing = true;
+			}
+			if ($height > $max_width) {
+				$height = $max_width;
+				$resizing = true;
+			}
+			if ($resizing) {
+				$resize = new ResizeImage($path);
+				$resize->resizeTo($width, $height, 'maxWidth');
+				$resize->saveImage($path, 90);
+			}
+		}
+		else {
+			$path = '';
+		}
+	}
+	else {
+		$path = '';
 	}
 	echo $path;
 }
@@ -53,69 +108,106 @@ else {
 	include 'header.php';
 ?>
 <script>
-var flickr_comicbubbles;
+var container, my_comicbubbles, submit_on_error = true, image_max_width = 800;
 function cb(){
   new ComicBubbles("main-cb", {bubble:
     {id: 'b1464800593928', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
   });
 
-  var submit_on_error = true, container = document.getElementById("result-container");
-  function submitForm(form_id) {
-    var sForm = document.getElementById(form_id);
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-      var img = document.createElement("img");
-      img.id = "pict7";
-      img.style.display = "none";
-      img.onload = function() {
-        container.innerHTML = "";
-				container.className = "";
-        container.appendChild(img);
-        img.style.display = "inline";
-				container.style.width = img.width + "px";
-        flickr_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false}});
-      }
-      img.onerror = function() {
-        if (submit_on_error) {
-          console.log('1st submit error');
-          sForm.value = xhr.responseText;
-          setTimeout(function(){ if (document.getElementsByClassName("error").length == 0) submitForm(); }, 1000);
-          submit_on_error = false;
-        }
-        else {
-          console.log('error');
-          container.innerHTML = "<p class='error'>Error. Try again</p>";
-        }
-      }
-      img.src = xhr.responseText;
-    }
-    xhr.open (sForm.method, sForm.action, true);
-    xhr.send (new FormData(sForm));
-  }
-  document.getElementById("search-form").onsubmit = function(e) {
-    e.preventDefault();
-    submit_on_error = true;
-		document.getElementById("image-max-width").value = container.offsetWidth;
-    document.getElementById("search-error").value = "";
-		container.innerHTML = "";
-		container.className = "empty";
-    if (document.getElementById("search-query").value.length < 2) return;
-    container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
-    submitForm("search-form");
-  }
+	document.getElementById("search-form").onsubmit = function(e) {
+		e.preventDefault();
+		submit_on_error = true;
+		document.getElementById("search-error").value = "";
+		if (resetContainer("search-query")) submitForm("search-form");
+	}
 	document.getElementById("url-form").onsubmit = function(e) {
 		e.preventDefault();
-		document.getElementById("image2-max-width").value = container.offsetWidth;
-		container.innerHTML = "";
-		container.className = "empty";
-		if (document.getElementById("url-query").value.length < 2) return;
-		container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
-		submitForm("url-form");
+		if (resetContainer("url-query")) submitForm("url-form");
 	}
+	document.getElementById("image-file").addEventListener("change", function(e) {
+		if (resetContainer("image-file")) submitForm("file-form");
+	}, false);
 
-	document.getElementById("image-max-width").value = container.offsetWidth;
-	document.getElementById("image2-max-width").value = container.offsetWidth;
+	var pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
+	document.getElementById("url-query").onclick = function(e) {
+		if (this.value == pixabay) this.value = "";
+	}
+	container = document.getElementById("result-container");
+	image_max_width = container.offsetWidth;
+	document.getElementById("url-query").value = pixabay;
   sh_highlightDocument();
+}
+
+function submitForm(form_id) {
+	var sForm = document.getElementById(form_id);
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function() {
+		var img = document.createElement("img");
+		img.id = "pict7";
+		img.style.display = "none";
+		img.onload = function() {
+			if (img.width < 100 || img.height < 100) {
+				container.innerHTML = "<p class='error'>Image too small</p>";
+			}
+			else {
+				container.innerHTML = "";
+				container.className = "";
+				container.appendChild(img);
+				container.style.width = img.width + "px";
+				img.style.display = "inline";
+				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false}});
+			}
+		}
+		img.onerror = function() {
+			if (submit_on_error && form_id == "search-form") {
+				console.log('1st submit error');
+				sForm.value = xhr.responseText;
+				setTimeout(function(){ if (document.getElementsByClassName("error").length == 0) submitForm(form_id); }, 1000);
+				submit_on_error = false;
+			}
+			else {
+				console.log('error');
+				container.innerHTML = "<p class='error'>Image not available</p>";
+			}
+		}
+		img.src = xhr.responseText;
+	}
+	xhr.open (sForm.method, sForm.action, true);
+	var formData = new FormData(sForm);
+	if (form_id == "file-form") {
+		formData = new FormData();
+		var files = document.getElementById("image-file").files;
+		formData.append("image_file", files[0]);
+		formData.append("upload", 1);
+	}
+	formData.append("image-max-width", image_max_width);
+	xhr.send(formData);
+}
+
+function resetContainer(query_field) {
+	container = document.getElementById("result-container");
+	container.innerHTML = "";
+	container.className = "empty";
+	//clearFileInput(document.getElementById("image-file"));
+	if (document.getElementById(query_field).value.length < 2) {
+		return false;
+	}
+	else {
+		container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
+		return true;
+	}
+}
+
+function clearFileInput(ctrl) {
+  try {
+    ctrl.value = null;
+  } catch(ex) { }
+  /*if (ctrl.value) {
+    ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
+		document.getElementById("image-file").addEventListener("change", function(e) {
+			if (resetContainer("image-file")) submitForm("file-form");
+		}, false);
+  }*/
 }
 
 function save(comicbubbles_object,updateImage){
@@ -146,7 +238,7 @@ function save(comicbubbles_object,updateImage){
 
 </script>
 </head>
-<body class="my" onload="cb()">
+<body onload="cb()">
 <?php
 	$page = "my-bubble";
 	include 'menu.php';
@@ -155,17 +247,18 @@ function save(comicbubbles_object,updateImage){
   <h2>Add speech balloons to your photos!</h2>
 	<div class="left">
     <form id="search-form" action="my-bubbles.php" method="post">
-      <input type="text" id="search-query" name="search-query" autocomplete="off">
+      <input type="text" id="search-query" name="search-query" autocomplete="off" value="dog">
       <input type="hidden" id="search-error" name="search-error" value="">
-			<input type="hidden" id="image-max-width" name="image-max-width" value="">
       <input type="submit" id="query-submit" value="Flickr Search">
     </form>
 		<form id="url-form" action="my-bubbles.php" method="post">
-      <input type="text" id="url-query" name="url-query" autocomplete="off">
-			<input type="hidden" id="image2-max-width" name="image2-max-width" value="">
+      <input type="text" id="url-query" name="url-query" autocomplete="off" value="">
       <input type="submit" id="url-submit" value="Load from URL">
     </form>
-		<button type="button" id="download1" onclick="save(flickr_comicbubbles)">download image</button>
+		<form id="file-form" action="my-bubbles.php" method="post" enctype="multipart/form-data">
+      <input type="file" id="image-file" name="image-file" autocomplete="off" value="">
+    </form>
+		<button type="button" id="download1" onclick="save(my_comicbubbles)">download image</button>
   </div>
   <div id="result-container" class="empty"></div>
 </div>
