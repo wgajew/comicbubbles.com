@@ -12,7 +12,7 @@ if (isset($_POST['search-query'])) {
 	}
 	$key = array_rand($images,1);
 	$img = $images[$key];
-	$path = '';
+	$path = 'empty';
 	if (!getimagesize($img)) $img = $images[array_rand($images,1)];
 	if (getimagesize($img)) {
 		$imageString = file_get_contents($img);
@@ -39,7 +39,7 @@ if (isset($_POST['search-query'])) {
 }
 else if (isset($_POST['url-query'])) {
 	require("ResizeImage.php");
-	$path = '';
+	$path = 'empty';
 	$img = $_POST['url-query'];
 	if (getimagesize($img)) {
 		$imageString = file_get_contents($img);
@@ -89,11 +89,11 @@ else if (isset($_POST["upload"])) {
 			}
 		}
 		else {
-			$path = '';
+			$path = 'empty';
 		}
 	}
 	else {
-		$path = '';
+		$path = 'empty';
 	}
 	echo $path;
 }
@@ -127,15 +127,27 @@ function cb(){
 	document.getElementById("image-file").addEventListener("change", function(e) {
 		if (resetContainer("image-file")) submitForm("file-form");
 	}, false);
+	document.getElementById("select-source").addEventListener("change", function(e) {
+		var selected_item = this.value;
+		var forms = document.getElementsByClassName("form");
+		for (var i = 0; i < forms.length; i++) {
+			forms[i].className = "form";
+		}
+		document.getElementById(selected_item).className = "form show";
+	}, false);
 
 	var pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
 	document.getElementById("url-query").onclick = function(e) {
 		if (this.value == pixabay) this.value = "";
 	}
+	document.getElementById("search-query").onclick = function(e) {
+		if (this.value == "dog") this.value = "";
+	}
 	container = document.getElementById("result-container");
 	image_max_width = container.offsetWidth;
 	document.getElementById("url-query").value = pixabay;
   sh_highlightDocument();
+	document.getElementById("select-source").options[0].selected = true;
 }
 
 function submitForm(form_id) {
@@ -155,7 +167,7 @@ function submitForm(form_id) {
 				container.appendChild(img);
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
-				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false}});
+				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, 'font-size': '20px'}});
 			}
 		}
 		img.onerror = function() {
@@ -188,7 +200,6 @@ function resetContainer(query_field) {
 	container = document.getElementById("result-container");
 	container.innerHTML = "";
 	container.className = "empty";
-	//clearFileInput(document.getElementById("image-file"));
 	if (document.getElementById(query_field).value.length < 2) {
 		return false;
 	}
@@ -196,18 +207,6 @@ function resetContainer(query_field) {
 		container.innerHTML = "<div class='load-container'><div class='loader'></div></div>";
 		return true;
 	}
-}
-
-function clearFileInput(ctrl) {
-  try {
-    ctrl.value = null;
-  } catch(ex) { }
-  /*if (ctrl.value) {
-    ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
-		document.getElementById("image-file").addEventListener("change", function(e) {
-			if (resetContainer("image-file")) submitForm("file-form");
-		}, false);
-  }*/
 }
 
 function save(comicbubbles_object,updateImage){
@@ -244,23 +243,29 @@ function save(comicbubbles_object,updateImage){
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
-  <h2>Add speech balloons to your photos!</h2>
+  <h2>Load your photo and <span style="color: #485076">double click</span> to add speech balloons!</h2>
 	<div class="left">
-    <form id="search-form" action="my-bubbles.php" method="post">
+		<span class="source">Source of Image:&nbsp;</span>
+		<select id="select-source" class="source">
+			<option value="file-form">Local Computer</option>
+			<option value="url-form">URL</option>
+			<option value="search-form">Flickr</option>
+		</select>
+    <form id="search-form" class="form" action="my-bubbles.php" method="post">
       <input type="text" id="search-query" name="search-query" autocomplete="off" value="dog">
       <input type="hidden" id="search-error" name="search-error" value="">
       <input type="submit" id="query-submit" value="Flickr Search">
     </form>
-		<form id="url-form" action="my-bubbles.php" method="post">
+		<form id="url-form" class="form" action="my-bubbles.php" method="post">
       <input type="text" id="url-query" name="url-query" autocomplete="off" value="">
       <input type="submit" id="url-submit" value="Load from URL">
     </form>
-		<form id="file-form" action="my-bubbles.php" method="post" enctype="multipart/form-data">
+		<form id="file-form" class="form show" action="my-bubbles.php" method="post" enctype="multipart/form-data">
       <input type="file" id="image-file" name="image-file" autocomplete="off" value="">
     </form>
-		<button type="button" id="download1" onclick="save(my_comicbubbles)">download image</button>
   </div>
   <div id="result-container" class="empty"></div>
+	<div class="down"><button type="button" id="download1" onclick="save(my_comicbubbles)">download image</button></div>
 </div>
 <?php include 'footer.php'; ?>
 </body>

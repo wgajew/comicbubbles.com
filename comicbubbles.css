@@ -98,7 +98,14 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 #main-menu a.myb.sel { color: #485076; }
 #fifth-demo-output-btn { position: static; }
 #search-form, #url-form, #file-form { float: left; margin-left: 15px; }
-#download1 { margin-left: 20px; }
+.left > .source { float: left; }
+#sixth-demo .down { margin: 10px 0; padding: 0; text-align: center; }
+#download1 { font: bold 17px Verdana; color: #485076; }
+#result-container.empty + .down { display: none; }
+#sixth-demo form input[type="text"] { width: 300px; }
+.left > .form { display: none; }
+.left > .form.show { display: block; }
+#sixth-demo span.source { font: 15px Verdana; }
 
 .load-container {
 	width: 200px;
