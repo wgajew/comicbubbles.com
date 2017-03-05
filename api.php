@@ -468,11 +468,11 @@ callback: function, optional
 miliseconds: Number, optional<br>
 callback: function, optional
 </p>
-<h4>moveTo(x, y, miliseconds, callback)<span>returns</span><span>Bubble</span></h4>
+<h4>moveTo(x, y, speed, callback)<span>returns</span><span>Bubble</span></h4>
 <p>
 x: Number, required<br>
 y: Number, required<br>
-miliseconds: Number, optional<br>
+speed: 'slowest'|'slower'|'slow'|'fast'|'faster'|'fastest', optional<br>
 callback: function, optional
 </p>
 <h4>delay(miliseconds, callback)<span>returns</span><span>Bubble</span></h4>
@@ -487,12 +487,12 @@ callback: function, optional
 <h4>onMouseEvent(callback, event)<span>returns</span><span>Bubble</span></h4>
 <p>
 callback: function, required<br>
-event: String, optional
+event: 'click'|'mousedown'|'mouseup'|'mouseover'|'mouseout', optional
 </p>
 <h4>offMouseEvent(callback, event)<span>returns</span><span>Bubble</span></h4>
 <p>
 callback: function, required<br>
-event: String, optional
+event: 'click'|'mousedown'|'mouseup'|'mouseover'|'mouseout', optional
 </p>
 <h4>getBubbleSettings()<span>returns</span><span>Object</span></h4>
 </div>
