@@ -51,7 +51,7 @@ function teddy(){
 </pre>
   <br>
   <h2>4. Adding and modifying bubbles with mouse actions</h2>
-  <video width="720" height="335" controls>
+  <video width="720" height="336" controls>
     <source src="boy_and_teddy.mp4" type="video/mp4">
     <source src="boy_and_teddy.ogg" type="video/ogg">
     <source src="boy_and_teddy.webm" type="video/webm">
