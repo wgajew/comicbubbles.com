@@ -168,6 +168,11 @@ function submitForm(form_id) {
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
 				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, 'font-size': '20px'}});
+				if (my_comicbubbles) {
+					var span = document.getElementById("double-click-span");
+					span.className = "red";
+					setTimeout(function(){ span.removeAttribute("class"); }, 5000);
+				}
 			}
 		}
 		img.onerror = function() {
@@ -243,7 +248,7 @@ function save(comicbubbles_object,updateImage){
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
-  <h2>Load your photo and <span style="color: #485076">double click</span> to add speech balloons!</h2>
+  <h2>Load your photo and <span id="double-click-span">double click</span> to add speech balloons!</h2>
 	<div class="left">
 		<span class="source">Source of Image:&nbsp;</span>
 		<select id="select-source" class="source">

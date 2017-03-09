@@ -15,14 +15,14 @@
 			</div>
 			<div class="fl">
 			<div class="box"></div>
-			<h1>Add speech bubbles to your images with ComicBubbles</h1>
+			<h1>Add speech balloons to your images with ComicBubbles</h1>
 			<p>
 			ComicBubbles is a JavaScript HTML5 canvas library which provides a simple way for adding speech and thought bubbles to photos and drawings.
 			</p>
       <ol>
         <li>Call ComicBubbles with your image id<br><span>new ComicBubbles("image_id", {canvas: { readonly: false }});</span></li>
-        <li>• Double click to add bubbles/change the style<br>• Enter a short text<br>• Drag and drop to move/resize<br>• Click the 's' and change colors and fonts</li>
-        <li>Save your bubbles as a piece of code or merge them with the original image</li>
+        <li>• Double click to add bubbles/change the style<br>• Enter a short text<br>• Drag and drop to move/resize<br>• Click 's' button to change colors and fonts</li>
+        <li>Save your balloons as a piece of code or merge them with the original image</li>
         <li>Have fun!</li>
       </ol>
 			</div>

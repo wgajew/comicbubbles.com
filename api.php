@@ -22,13 +22,14 @@
 ?>
 <div class="main">
 <h3>Basic usage</h3>
-<h4>var cb = new ComicBubbles(image_id)</h4>
+<h4>var MyBubbles = new ComicBubbles(image_id)</h4>
 <span>or</span>
-<h4>var cb = new ComicBubbles(image_id, canvas_settings, bubble_settings)</h4>
+<h4>var MyBubbles = new ComicBubbles(image_id, canvas_settings, bubble_settings)</h4>
 <p>
 image_id: String, required<br>
 canvas_settings: Object, optional<br>
-bubble_settings: Object, optional
+bubble_settings: Object, optional<br><br>
+<span style="color: red">to destroy MyBubbles call DestroyComicBubbles(MyBubbles)</span>
 </p>
 <h3>Setting up options & adding bubbles</h3>
 <h4>var canvas_settings = {'canvas': canvas_options}</h4>

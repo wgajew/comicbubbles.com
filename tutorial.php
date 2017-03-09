@@ -23,7 +23,7 @@ function teddy(){
 <div class="main">
   <h2>1. Adding the library to an HTML page</h2>
   <p>
-  ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech bubbles to photos. The library consists of two files. The main file - comicbubbles.js - is used to display speech bubbles defined as JavaScript objects. Thanks to the other one - comicbubbles_editor.js - you can create and modify bubbles with mouse actions. Both files should be placed inside the &lt;head&gt; section of an HTML page with a &lt;script&gt; tag.
+  ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech balloons to photos. The library consists of two files. The main file - comicbubbles.js - is used to display speech bubbles defined as JavaScript objects. Thanks to the other one - comicbubbles_editor.js - you can create and modify bubbles with mouse actions. Both files should be placed inside the &lt;head&gt; section of an HTML page with a &lt;script&gt; tag.
   </p>
 <pre>
 &lt;head&gt;
@@ -35,13 +35,13 @@ function teddy(){
   <h2>2. Calling ComicBubbles with the id of an image</h2>
 <pre>
 &lt;script&gt;
-  new ComicBubbles("my_image_id", {canvas: { readonly: false }});
+  var MyBubbles = new ComicBubbles("my_image_id", {canvas: { readonly: false }});
 &lt;/script&gt;
 </pre>
 
   <h2>3. Preparing the ComicBubbles output box</h2>
   <p>
-  While adding and modifying ComicBubbles bubbles lots of parameters change. A current state of the settings can be displayed inside a &lt;div&gt; (or any other HTML block element). The element (output box) can be placed anywhere in the &lt;body&gt; section. In order that it could work its id must start with the image's id and end with '-comic-bubbles-output'.
+  While adding and modifying ComicBubbles bubbles lots of parameters change. A current state of the settings can be displayed inside a &lt;div&gt; (or any other HTML block element). The element (output box) can be placed anywhere in the &lt;body&gt; section. In order that it could work its id must begin with the id of the image and end with the suffix '-comic-bubbles-output'.
   </p>
 <pre>
 &lt;body&gt;
@@ -63,7 +63,7 @@ function teddy(){
   <img src="t1.png" width="720" height="180">
   <h3>4.2. Changing the style</h3>
   <h4>Switching on the default style (bubbleStyle = 'speak')</h4>
-  <p>Turning the rectangular field into a 'proper' bubble can be done by double clicking on any of the 8 square dots which are on the red outline</p>
+  <p>Turning the rectangular field into a 'proper' speech balloon can be done by double clicking on any of the 8 square dots which are on the red outline</p>
   <img src="t2.png" width="720" height="180">
   <h4>Changing the bubbleStyle to 'think'</h4>
   <p>Double clicking on the bubble tail changes the style</p>
@@ -83,7 +83,7 @@ function teddy(){
   <p style="color: red;">The text field of a selected bubble is not well suited for interpreting HTML tags. Copying website content and pasting it in with HTML formatting should be avoided (can cause unexpected effects).</p>
   <img src="t8.png" width="720" height="180">
   <h4>Formatting</h4>
-  <p>The text can be formatted with a limited set of features which become available after clicking the 'S' button.</p>
+  <p>The text can be formatted with a limited set of features which become available after clicking the 's' button.</p>
   <img src="t9.png" width="720" height="260">
   <h4>Deselecting</h4>
   <p>Clicking anywhere in the picture (outside the bubble) makes the selection frame disappear.</p>
