@@ -57,13 +57,13 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #sixth-demo { background: #f2f2f2; }
 #sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }
 #result-container { width: 1280px; margin: auto; position: relative; }
-#result-container.empty { background: #D5D7E5; height: calc(100vh - 205px); min-width: 1280px; }
+#result-container.empty { background: #D5D7E5; min-height: 250px; height: calc(100vh - 205px); min-width: 1280px; }
 #result-container .error { font: 12px Verdana; color: red; }
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
 h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #7e81a8; }
-.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 40px; margin: 40px auto 0; color: #485076; background: #fff; width: calc(100% - 80px); max-width: 720px; font: 19px Verdana; }
+.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 40px; margin: 40px auto 0; color: #485076; background: #fff; width: calc(100% - 80px); min-width: 400px; max-width: 720px; font: 19px Verdana; }
 .contact form input[type=text], .contact form textarea { font: 19px Verdana; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #485076; background: #fff; padding: 10px; margin: 5px 0 12px; }
 .contact form input.red, .contact form textarea.red { border: 1px solid red; }
 .contact form textarea { min-height: 200px; }
