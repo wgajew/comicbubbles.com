@@ -64,8 +64,8 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
 h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #7e81a8; }
-.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 40px; margin: 40px auto 0; color: #485076; background: #fff; width: calc(100% - 80px); min-width: 400px; max-width: 720px; font: 19px Verdana; }
-.contact form input[type=text], .contact form textarea { font: 19px Verdana; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #485076; background: #fff; padding: 10px; margin: 5px 0 12px; }
+.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 40px; margin: 40px auto 0; color: #485076; background: #fff; width: calc(100% - 80px); max-width: 720px; font: 19px Verdana; }
+.contact form input[type=text], .contact form textarea { font: 19px Verdana; min-width: 400px; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #485076; background: #fff; padding: 10px; margin: 5px 0 12px; }
 .contact form input.red, .contact form textarea.red { border: 1px solid red; }
 .contact form textarea { min-height: 200px; }
 .contact form input[type=submit] { font: 19px Verdana; padding: 5px 30px; }
