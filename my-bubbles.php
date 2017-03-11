@@ -110,9 +110,7 @@ else {
 <script>
 var container, my_comicbubbles, submit_on_error = true, image_max_width = 800;
 function cb(){
-  new ComicBubbles("main-cb", {bubble:
-    {id: 'b1464800593928', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
-  });
+	<?php include 'cb_is.php'; ?>
 
 	document.getElementById("search-form").onsubmit = function(e) {
 		e.preventDefault();

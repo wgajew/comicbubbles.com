@@ -33,13 +33,9 @@ else {
 	include 'header.php';
 ?>
 <script>
-
 function cb(){
-  var cob = new ComicBubbles("main-cb", {bubble:
-    {id: 'cob', text: "ComicBubbles is\na speech bubble\nJavaScript library", x: 40, y: 13, width: 108, height: 44, fontFamily: 'Verdana, Geneva, sans-serif', fontSize: '12px', textAlign: 'center', background: '#ffffff', color: '#000000', opacity: 0.7, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 0, tailY: 0}
-  });
+	<?php include 'cb_is.php'; ?>
 }
-
 </script>
 </head>
 <body class="contact" onload="cb()">
