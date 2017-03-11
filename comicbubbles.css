@@ -54,6 +54,7 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #fifth-demo .right .img { width: 399px; height: 356px; float: left; position: relative; }
 #fifth-demo .right .img > p { width: 398px; text-align: center; position: absolute; left: 0; bottom: -45px; font: 15px Verdana; }
 #fifth-demo pre { font-size: 14px; }
+#fifth-demo h2 span { font: normal 15px Verdana; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
 #sixth-demo { background: #f2f2f2; }
 #sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }

@@ -19,8 +19,8 @@ var im, im_loader;
 
 function bedouin(){
   var bedouin_cb, saving;
-  bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', fontWeight: 'bold', textAlign: 'center', readonly: false}});
-  bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#8b4513', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
+  bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', readonly: false}});
+  bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
   bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
   var b = bedouin_cb.getBubbleById('bedouin1'),
     c = bedouin_cb.getBubbleById('camel1');
@@ -43,7 +43,7 @@ function bedouin(){
 
 function save(comicbubbles_object,updateImage){
   var b_data = comicbubbles_object.getBubblesData();
-  b_data['jpg_quality'] = 85;
+  b_data['jpg_quality'] = 95;
   b_data['png_quality'] = 8;
   var json = JSON.stringify(b_data)
   request = new XMLHttpRequest();
@@ -87,14 +87,14 @@ function outputOnOff(b){
 	include 'menu.php';
 ?>
 <div id="fifth-demo" class="demo">
-  <h2>Saving images with bubbles</h2>
+  <h2>Saving images with bubbles <span>(autosave example)</span></h2>
   <div class="right">
     <div class="img">
 			<p>Image with ComicBubbles object (<span id="fifth-demo-output-btn" onclick="outputOnOff(this)">SHOW</span>)</p>
       <img id="pict6" src="bedouin.jpg" width="399" height="356" onload="bedouin()">
     </div>
     <div class="img" id="saved-image">
-			<p>Image with hardcoded speech bubbles</p>
+			<p>Image with hardcoded speech balloons</p>
       <img id="pict8" width="399" height="356" src="bedouin.jpg">
     </div>
     <div id="img-loader">
@@ -108,9 +108,9 @@ function outputOnOff(b){
 <pre class="sh_javascript_dom">
 function <button id="btn6" onclick="bedouin()">bedouin()</button>{
 
-var bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', fontWeight: 'bold', textAlign: 'center', readonly: false}});
+bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', readonly: false}});
 
-bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#8b4513', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
+bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
 bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
 
 var b = bedouin_cb.getBubbleById('bedouin1'), c = bedouin_cb.getBubbleById('camel1'),
@@ -137,7 +137,7 @@ b.delay(2000).show(function(){
 
 function save(comicbubbles_object, updateImage){
   var b_data = comicbubbles_object.getBubblesData();
-  b_data['jpg_quality'] = 85;
+  b_data['jpg_quality'] = 95;
   var json = JSON.stringify(b_data)
   request = new XMLHttpRequest();
   request.onreadystatechange = function(){

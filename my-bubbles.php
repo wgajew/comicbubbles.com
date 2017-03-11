@@ -214,7 +214,7 @@ function resetContainer(query_field) {
 
 function save(comicbubbles_object,updateImage){
   var b_data = comicbubbles_object.getBubblesData();
-  b_data['jpg_quality'] = 85;
+  b_data['jpg_quality'] = 95;
   b_data['png_quality'] = 8;
   var json = JSON.stringify(b_data)
   request = new XMLHttpRequest();
