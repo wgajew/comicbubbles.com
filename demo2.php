@@ -118,7 +118,7 @@ function cb(){
 	include 'menu.php';
 ?>
 <div id="third-demo" class="demo">
-  <h2>Learning foreign vocabulary</h2>
+  <h2>Interactive picture dictionary module</h2>
   <div id="third-demo-output" class="demo-output">
     <div id="pict5-comic-bubbles-output"></div>
   </div>
@@ -196,7 +196,7 @@ function finishTest(){
 </div>
 <div class="demo-spacer">&nbsp;</div>
 <div id="fourth-demo" class="demo">
-  <h2>Who is who?</h2>
+  <h2>Labeling people</h2>
   <div class="right">
     <img id="pict4" src="pict4.jpg" width="800" height="260" onload="camels()">
   </div>
