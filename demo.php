@@ -5,6 +5,11 @@
 	include 'header.php';
 ?>
 <script>
+
+if (top.location != location) {
+	top.location.href = document.location.href;
+}
+
 var people_cb;
 function people(){
 	people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: '"Comic Sans MS", cursive, sans-serif', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', color: '#483d8b'}}, {bubble: [
