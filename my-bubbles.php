@@ -168,7 +168,7 @@ function submitForm(form_id) {
 				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, 'font-size': '20px'}});
 				if (my_comicbubbles) {
 					var span = document.getElementById("double-click-span");
-					span.className = "red";
+					span.className = "black";
 					setTimeout(function(){ span.removeAttribute("class"); }, 5000);
 				}
 			}
@@ -246,7 +246,7 @@ function save(comicbubbles_object,updateImage){
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
-  <h2>Load your photo and <span id="double-click-span">double click</span> to add speech balloons!</h2>
+	<h2>Load your photo and <span id="double-click-span">double click</span> to add speech balloons!</h2>
 	<div class="left">
 		<span class="source">Source of Image:&nbsp;</span>
 		<select id="select-source" class="source">
@@ -254,20 +254,20 @@ function save(comicbubbles_object,updateImage){
 			<option value="url-form">URL</option>
 			<option value="search-form">Flickr</option>
 		</select>
-    <form id="search-form" class="form" action="my-bubbles.php" method="post">
-      <input type="text" id="search-query" name="search-query" autocomplete="off" value="dog">
-      <input type="hidden" id="search-error" name="search-error" value="">
-      <input type="submit" id="query-submit" value="Flickr Search">
-    </form>
+		<form id="search-form" class="form" action="my-bubbles.php" method="post">
+			<input type="text" id="search-query" name="search-query" autocomplete="off" value="dog">
+			<input type="hidden" id="search-error" name="search-error" value="">
+			<input type="submit" id="query-submit" value="Flickr Search">
+		</form>
 		<form id="url-form" class="form" action="my-bubbles.php" method="post">
-      <input type="text" id="url-query" name="url-query" autocomplete="off" value="">
-      <input type="submit" id="url-submit" value="Load from URL">
-    </form>
+			<input type="text" id="url-query" name="url-query" autocomplete="off" value="">
+			<input type="submit" id="url-submit" value="Load from URL">
+		</form>
 		<form id="file-form" class="form show" action="my-bubbles.php" method="post" enctype="multipart/form-data">
-      <input type="file" id="image-file" name="image-file" autocomplete="off" value="">
-    </form>
-  </div>
-  <div id="result-container" class="empty"></div>
+			<input type="file" id="image-file" name="image-file" autocomplete="off" value="">
+		</form>
+	</div>
+	<div id="result-container" class="empty"></div>
 	<div class="down"><button type="button" id="download1" onclick="save(my_comicbubbles)">download image</button></div>
 </div>
 <?php include 'footer.php'; ?>

@@ -57,6 +57,7 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #fifth-demo h2 span { font: normal 15px Verdana; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
 #sixth-demo { background: #f2f2f2; }
+#sixth-demo .left { overflow: auto; }
 #sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }
 #result-container { width: 1280px; margin: auto; position: relative; }
 #result-container.empty { background: #D5D7E5; min-height: 250px; height: calc(100vh - 205px); min-width: 1280px; }
@@ -102,14 +103,13 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 #search-form, #url-form, #file-form { float: left; margin-left: 15px; }
 .left > .source { float: left; }
 #sixth-demo .down { margin: 10px 0; padding: 0; text-align: center; }
-#download1 { font: bold 17px Verdana; color: #485076; }
 #result-container.empty + .down { display: none; }
-#sixth-demo form input[type="text"] { width: 300px; }
+#sixth-demo form input[type="text"] { width: 400px; }
 .left > .form { display: none; }
 .left > .form.show { display: block; }
 #sixth-demo span.source { font: 15px Verdana; }
 #double-click-span { color: #485076; }
-#double-click-span.red { color: red; }
+#double-click-span.black { color: #000000; }
 
 .load-container {
 	width: 200px;
