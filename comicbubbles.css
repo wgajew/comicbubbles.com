@@ -104,6 +104,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .left > .source { float: left; }
 #sixth-demo .down { margin: 10px 0; padding: 0; text-align: center; }
 #result-container.empty + .down { display: none; }
+#result-container-info { position: absolute; right: 5px; top: 3px; font: 11px Tahoma; color: #ffffff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 #sixth-demo form input[type="text"] { width: 400px; }
 .left > .form { display: none; }
 .left > .form.show { display: block; }

@@ -142,9 +142,10 @@ function cb(){
 		if (this.value == "dog") this.value = "";
 	}
 	container = document.getElementById("result-container");
+	showWidth();
 	image_max_width = container.offsetWidth;
 	document.getElementById("url-query").value = pixabay;
-  sh_highlightDocument();
+	sh_highlightDocument();
 	document.getElementById("select-source").options[0].selected = true;
 }
 
@@ -165,7 +166,7 @@ function submitForm(form_id) {
 				container.appendChild(img);
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
-				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, 'font-size': '20px'}});
+				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.85}});
 				if (my_comicbubbles) {
 					var span = document.getElementById("double-click-span");
 					span.className = "black";
@@ -199,9 +200,21 @@ function submitForm(form_id) {
 	xhr.send(formData);
 }
 
+function showWidth(){
+	var c = document.getElementById("result-container");
+	if (c.innerHTML == "") c.innerHTML = "<span id='result-container-info'>width: " + c.offsetWidth + " px</span>";	
+}
+
+window.addEventListener('resize', function(event){
+	var rci = document.getElementById("result-container-info");
+	if (rci) {
+		rci.innerHTML = "width: " + document.getElementById("result-container").offsetWidth + " px";
+	}
+});
+
 function resetContainer(query_field) {
 	container = document.getElementById("result-container");
-	container.innerHTML = "";
+	showWidth();
 	container.className = "empty";
 	if (document.getElementById(query_field).value.length < 2) {
 		return false;
