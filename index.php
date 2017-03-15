@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" class="ix">
 <head>
-	<title>ComicBubbles - speech bubble JavaScript library</title>
+	<title>ComicBubbles - speech balloon JavaScript library</title>
 	<meta charset="utf-8">
-	<meta name="description" content="ComicBubbles is a JavaScript library which enables adding speech balloons to photos in a very simple way.">
+	<meta name="description" content="ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech bubbles to photos. ComicBubbles bubbles can be saved as JavaScript objects or merged with the original image.">
 	<meta name="keywords" content="speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
 	<link href="comicbubbles.css" rel="stylesheet" >
 </head>
