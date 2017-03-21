@@ -108,7 +108,9 @@ else {
 	include 'header.php';
 ?>
 <script>
-var container, my_comicbubbles, submit_on_error = true, image_max_width = 800;
+var container, my_comicbubbles, submit_on_error = true, image_max_width = 800,
+	pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
+
 function cb(){
 	<?php include 'cb_is.php'; ?>
 
@@ -134,7 +136,6 @@ function cb(){
 		document.getElementById(selected_item).className = "form show";
 	}, false);
 
-	var pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
 	document.getElementById("url-query").onclick = function(e) {
 		if (this.value == pixabay) this.value = "";
 	}
@@ -166,7 +167,11 @@ function submitForm(form_id) {
 				container.appendChild(img);
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
-				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.85}});
+				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.80}});
+				var pixa = pixabay.split("/");
+				if (img.src.indexOf(pixa[pixa.length-1]) > -1) {
+					my_comicbubbles.setFontSize(25).setHeight(76).setWidth(160).setBackground('#191970').setColor('#ffffff');
+				}
 				if (my_comicbubbles) {
 					var span = document.getElementById("double-click-span");
 					span.className = "black";
