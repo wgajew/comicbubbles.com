@@ -10,6 +10,6 @@
 	<a href="contact" <?php if($page == "contact") echo 'class="sel"'; ?>>contact</a>
 	<div id="download-cb">
 		<h3>download</h3>
-		<a href="comicbubbles_demo.zip" title="ComicBubbles demo" class="down">comicbubbles.zip</a>
+		<a href="comicbubbles.zip" title="ComicBubbles demo" class="down">comicbubbles.zip</a>
 	</div>
 </nav>

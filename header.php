@@ -10,6 +10,7 @@ function is_localhost(){
 <meta name="keywords" content="speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
 <link href="sh_peachpuff.css" rel="stylesheet">
 <link href="comicbubbles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="sh_main.min.js"></script>
 <script src="sh_javascript.min.js"></script>
 <script src="sh_javascript_dom.min.js"></script>
