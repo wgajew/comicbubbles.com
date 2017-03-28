@@ -76,6 +76,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .contact form input:nth-of-type(3) { display: none; }
 .contact .footer { background: #f2f2f2; }
 .tutorial p, #api .main p { color: #000; font-size: 15px; line-height: 1.5; margin: 3px 0; }
+#api .main p.comic-bubbles-output { color: #fff; }
 .tutorial pre { margin: 10px 0; }
 .tutorial .img { float: left; width: 360px; height: 300px; }
 .tutorial .output { float: left; font-size: 14px; font-family: monospace; padding: 4px 1px 1px 4px; width: 355px; height: 295px; background: #000; color: #fff; }
