@@ -118,7 +118,7 @@ function cb(){
 	include 'menu.php';
 ?>
 <div id="third-demo" class="demo">
-  <h2>Interactive picture dictionary module</h2>
+  <h2>Picture dictionary interactive module</h2>
   <div id="third-demo-output" class="demo-output">
     <div id="pict5-comic-bubbles-output"></div>
   </div>
