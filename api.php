@@ -24,10 +24,10 @@ function cb(){
 image_id: String, required<br>
 canvas_settings: Object, optional<br>
 bubble_settings: Object, optional<br><br>
-<span style="color: red">to destroy MyBubbles call DestroyComicBubbles(MyBubbles)</span>
+<span style="color: red; font-size: 13px">If you want to destroy MyBubbles, call DestroyComicBubbles(MyBubbles)</span>
 </p>
-<h3>Setting up options & adding bubbles</h3>
-<h4>var canvas_settings = {'canvas': canvas_options}</h4>
+<h3>Setting up options</h3>
+<h4>var canvas_settings = {canvas: canvas_options}</h4>
 <h4>canvas_options</h4>
 <table>
   <tr>
@@ -52,8 +52,8 @@ bubble_settings: Object, optional<br><br>
   </tr>
   <tr>
     <td>fontFamily</td>
-    <td>'Arial, Helvetica, sans-serif'</td>
-    <td>valid values:<br>- 'Arial, Helvetica, sans-serif'<br>- '&quot;Arial Black&quot;, Gadget, sans-serif'<br>- '&quot;Comic Sans MS&quot;, cursive, sans-serif'<br>- '&quot;Courier New&quot;, Courier, monospace'<br>- 'Georgia, serif'<br>- 'Impact, Charcoal, sans-serif'<br>- '&quot;Lucida Console&quot;, Monaco, monospace'<br>- '&quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif'<br>- '&quot;Palatino Linotype&quot;, &quot;Book Antiqua&quot;, Palatino, serif'<br>- 'Tahoma, Geneva, sans-serif'<br>- '&quot;Times New Roman&quot;, Times, serif'<br>- '&quot;Trebuchet MS&quot;, Helvetica, sans-serif'<br>- 'Verdana, Geneva, sans-serif'</td>
+    <td>'Arial'</td>
+    <td>valid fonts:<br>- 'Arial'<br>- 'Arial Black'<br>- 'Comic Sans MS'<br>- 'Courier New'<br>- 'Georgia'<br>- 'Impact'<br>- 'Lucida Console'<br>- 'Lucida Sans Unicode'<br>- 'Palatino Linotype'<br>- 'Tahoma'<br>- 'Times New Roman'<br>- 'Trebuchet MS'<br>- 'Verdana'<br><span style="font-size: 13px"><b>Note:</b> You can also use Google fonts that are requested with a stylesheet link (inside the &lt;head&gt; section)</span></td>
   </tr>
   <tr>
     <td>fontSize</td>
@@ -107,7 +107,7 @@ bubble_settings: Object, optional<br><br>
   </tr>
 </table>
 <br>
-<h4>var bubble_settings = {'bubble': bubble_options}</h4>
+<h4>var bubble_settings = {bubble: bubble_options}</h4>
 <h4>bubble_options</h4>
 <table>
   <tr>
