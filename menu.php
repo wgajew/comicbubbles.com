@@ -9,6 +9,7 @@
 	<a href="my-bubbles" class="myb<?php if($page == "my-bubbles") echo ' sel'; ?>">my bubbles</a>
 	<a href="contact" <?php if($page == "contact") echo 'class="sel"'; ?>>contact</a>
 	<div id="download-cb">
+		<a href="https://codecanyon.net/item/comicbubbles-speech-balloon-javascript-library/19598432" class="buy">buy on Envato</a>
 		<h3>download</h3>
 		<a href="comicbubbles.zip" title="ComicBubbles demo" class="down">comicbubbles.zip</a>
 	</div>

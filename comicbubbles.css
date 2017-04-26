@@ -24,13 +24,14 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 nav { height: 70px; position: relative; overflow: hidden; background: #485076; }
 #main-cb { width: 180px; height: 70px; float: left; }
 #download-cb { position: absolute; right: 10px; top: 0; height: 70px; text-align: center; }
-#download-cb h3 { margin: 0; padding: 27px 0 0; color: #fff; font-size: 14px; font-family: Verdana; font-weight: bold; letter-spacing: 2px; }
+#download-cb h3 { margin: 0; padding: 7px 0 0; color: #fff; font-size: 14px; font-family: Verdana; font-weight: bold; letter-spacing: 2px; }
 #download-cb .down { font-size: 13px; color: #fff; }
+#download-cb .buy { font-family: Tahoma; font-size: 15px; color: #fff49e; position: relative; top: 3px; }
 nav .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.2; }
-nav a:not(.down) { display: block; padding: 27px 10px 23px 10px; height: 20px; float: left; font-size: 14px; font-family: Verdana; font-weight: bold; color: #fff; text-align: center; text-decoration: none; }
-nav a:first-child { margin-left: 20px; }
+nav a:not(.down):not(.buy) { display: block; padding: 27px 10px 23px 10px; height: 20px; float: left; font-size: 14px; font-family: Verdana; font-weight: bold; color: #fff; text-align: center; text-decoration: none; }
+nav a:first-child:not(.buy) { margin-left: 20px; }
 nav#main-menu > .sel { background: #C8CBD6; color: #485076; opacity: 1; }
-nav a:not(.sel):not(.down):hover { background: #C8CBD6; color: #fff; }
+nav a:not(.sel):not(.down):not(.buy):hover { background: #C8CBD6; color: #fff; }
 .demo .left { padding: 10px 15px; overflow: auto; margin: auto; }
 .demo .right { float: right; width: 800px; margin: auto; }
 .demo .clear { clear: both; }

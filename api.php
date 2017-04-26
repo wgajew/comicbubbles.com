@@ -26,12 +26,12 @@ canvas_settings: Object, optional<br>
 bubble_settings: Object, optional<br><br>
 <span style="color: red; font-size: 13px">If you want to destroy MyBubbles, call DestroyComicBubbles(MyBubbles)</span>
 </p>
-<h3>Setting up options</h3>
-<h4>var canvas_settings = {canvas: canvas_options}</h4>
-<h4>canvas_options</h4>
+<h3>Setting properties</h3>
+<h4>var canvas_settings = {canvas: canvas_properties}</h4>
+<h4>canvas_properties</h4>
 <table>
   <tr>
-    <th>option</th>
+    <th>property</th>
     <th>default</th>
     <th>description</th>
   </tr>
@@ -58,7 +58,7 @@ bubble_settings: Object, optional<br><br>
   <tr>
     <td>fontSize</td>
     <td>&quot;15px&quot;</td>
-    <td>valid values: integers from 8 to 50</td>
+    <td>valid values: integers from 8 to 99</td>
   </tr>
   <tr>
     <td>fontStyle</td>
@@ -107,11 +107,11 @@ bubble_settings: Object, optional<br><br>
   </tr>
 </table>
 <br>
-<h4>var bubble_settings = {bubble: bubble_options}</h4>
-<h4>bubble_options</h4>
+<h4>var bubble_settings = {bubble: bubble_properties}</h4>
+<h4>bubble_properties</h4>
 <table>
   <tr>
-    <th>option</th>
+    <th>property</th>
     <th>default</th>
     <th>description</th>
   </tr>
@@ -158,7 +158,7 @@ bubble_settings: Object, optional<br><br>
   <tr>
     <td>fontSize</td>
     <td>canvas_settings.canvas.fontSize</td>
-    <td>valid values: integers from 8 to 50</td>
+    <td>valid values: integers from 8 to 99</td>
   </tr>
   <tr>
     <td>fontStyle</td>
