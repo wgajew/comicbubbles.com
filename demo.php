@@ -12,7 +12,7 @@ if (top.location != location) {
 
 var people_cb;
 function people(){
-	people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', color: '#483d8b'}}, {bubble: [
+	people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#483d8b'}}, {bubble: [
 		{id: 'bub1', text: "Tell us more about it", x: 242, y: 391, width: 130, height: 109, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
 		{id: 'bub2', text: "I'm not that type of person", x: 354, y: 279, width: 184, height: 79, bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
 		{id: 'bub3', text: "He's so\nshy..", x: 646, y: 25, width: 94, height: 62, fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
@@ -36,16 +36,16 @@ function people(){
 }
 function dog_cat(){
 	new ComicBubbles("pict2", {bubble: [
-	{id: 'bub2', text: "I'm\na happy\nCAT", x: 427, y: 336, width: 64, height: 66, textAlign: 'center', background: '#ff4500', color: '#ffffff', readonly: false, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328},
-	{id: 'bub1', text: "I'm\na happy\nDOG", x: 93, y: 275, width: 64, height: 66, textAlign: 'center', background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223}
+	{id: 'bub2', text: "I'm\na happy\nCAT", x: 427, y: 336, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#ff4500', color: '#ffffff', readonly: false, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328},
+	{id: 'bub1', text: "I'm\na happy\nDOG", x: 93, y: 275, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223}
 	]});
 }
 function dog_and_cat(){
 	var animals = ['BEAR','PIG','DEER','LION','HORSE','SNAKE','BIRD','FISH','COW','CAT','DOG'];
 	var dog_cat_cb = new ComicBubbles("pict2");
-	dog_cat_cb.addBubble({id: 'bub1', text: "I'm\na happy\n"+animals[0], x: 93, y: 275, width: 64, height: 66, textAlign: 'center', background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
-	dog_cat_cb.addBubble({id: 'bub2', text: "crazy?", x: 342, y: 114, width: 54, height: 28, fontSize: '17px', textAlign: 'center', background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
-	dog_cat_cb.addBubble({id: 'bub3', text: "I'm\na happy\n"+animals[10], x: 427, y: 336, width: 64, height: 66, textAlign: 'center', background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
+	dog_cat_cb.addBubble({id: 'bub1', text: "I'm\na happy\n"+animals[0], x: 93, y: 275, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
+	dog_cat_cb.addBubble({id: 'bub2', text: "crazy?", x: 342, y: 114, width: 54, height: 28, fontSize: '17px', textAlign: 'center', lineHeight: 1.5, background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
+	dog_cat_cb.addBubble({id: 'bub3', text: "I'm\na happy\n"+animals[10], x: 427, y: 336, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
 	var bub1 = dog_cat_cb.getBubbleById('bub1');
 	var bub2 = dog_cat_cb.getBubbleById('bub2');
 	var bub3 = dog_cat_cb.getBubbleById('bub3');
@@ -59,7 +59,7 @@ function dog_and_cat(){
 var bear_cb;
 function bear(){
 	bear_cb = new ComicBubbles("pict3",{bubble:
-	{id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: 'Comic Sans MS', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
+	{id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: 'Comic Sans MS', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
 	});
 	var bear1 = bear_cb.getBubbleById('bear1');
 	var roar = false;
@@ -115,7 +115,7 @@ function cb(){
 <pre class="sh_javascript_dom">
 function <button id="btn1" onclick="people()">people()</button>{
 
-var people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', color: '#483d8b'}}, {bubble: [
+var people_cb = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#483d8b'}}, {bubble: [
   {id: 'bub1', text: "Tell us more about it", x: 242, y: 391, width: 130, height: 109, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
   {id: 'bub2', text: "I'm not that type of person", x: 354, y: 279, width: 184, height: 79, bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
   {id: 'bub3', text: "He's so\nshy..", x: 646, y: 25, width: 94, height: 62, fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
@@ -162,9 +162,9 @@ function <button id="btn2" onclick="dog_and_cat()">dog_and_cat()</button>{
 var dog_cat_cb = new ComicBubbles("pict2"),
     animals = ['BEAR', 'PIG', 'DEER', 'LION', 'HORSE', 'SNAKE', 'BIRD', 'FISH', 'COW', 'CAT', 'DOG'];
 
-dog_cat_cb<wbr>.addBubble({id: 'bub1', text: "I'm\na happy\n"+animals[0], x: 93, y: 275, width: 64, height: 66, textAlign: 'center', background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
-dog_cat_cb<wbr>.addBubble({id: 'bub2', text: "crazy?", x: 342, y: 114, width: 54, height: 28, fontSize: '17px', textAlign: 'center', background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
-dog_cat_cb<wbr>.addBubble({id: 'bub3', text: "I'm\na happy\n"+animals[10], x: 427, y: 336, width: 64, height: 66, textAlign: 'center', background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
+dog_cat_cb<wbr>.addBubble({id: 'bub1', text: "I'm\na happy\n"+animals[0], x: 93, y: 275, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
+dog_cat_cb<wbr>.addBubble({id: 'bub2', text: "crazy?", x: 342, y: 114, width: 54, height: 28, fontSize: '17px', textAlign: 'center', lineHeight: 1.5, background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
+dog_cat_cb<wbr>.addBubble({id: 'bub3', text: "I'm\na happy\n"+animals[10], x: 427, y: 336, width: 64, height: 66, textAlign: 'center', lineHeight: 1.5, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
 
 var bub1 = dog_cat_cb<wbr>.getBubbleById('bub1'),
     bub2 = dog_cat_cb<wbr>.getBubbleById('bub2'),
@@ -183,7 +183,7 @@ bub1<wbr>.delay(800)<wbr>.setText("I'm\na happy\n"+animals[1], function(){
 
 
 var bear_cb = new ComicBubbles("pict3", {bubble:
-  {id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: 'Comic Sans MS', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
+  {id: 'bear1', text: "ROAAAR!", x: 70, y: 262, width: 113, height: 37, fontFamily: 'Comic Sans MS', fontSize: '23px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, background: '#dc143c', color: '#7fff00', bubbleStyle: 'scream', tailLocation: 'n', tailX: 127, tailY: 181}
 });
 function <button id="btn3" onclick="roar()">roar()</button>{
 

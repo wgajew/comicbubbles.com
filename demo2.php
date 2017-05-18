@@ -8,7 +8,7 @@
 function vegetables(){
   var vegetables_cb, click = 0,
     v = ["seler", "marchew", "burak", "pietruszka", "ziemniak", "czosnek", "cebula"].sort(function(){ return .5 - Math.random(); });
-  vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, fontSize: '22px', fontWeight: 'bold', textAlign: 'center', color: '#8b0000', bubbleStyle: 'arrow'}}, {bubble: [
+  vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, fontSize: '22px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#8b0000', bubbleStyle: 'arrow'}}, {bubble: [
     {id: 'v1', name: "kalarepa", text: "kalarepa", x: 35, y: 70, color: '#0000cd', tailLocation: 'se', tailX: 216, tailY: 205},
     {id: 'v2', name: "seler", text: "click", x: 635, y: 70, tailLocation: 'sw', tailX: 592, tailY: 147},
     {id: 'v3', name: "marchew", text: "click", x: 35, y: 215, tailLocation: 'e', tailX: 232, tailY: 249},
@@ -65,7 +65,7 @@ function vegetables(){
 
 var camels_cb;
 function camels(){
-  camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
+  camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
   {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', tailLocation: 's', tailX: 173, tailY: 83},
   {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', tailLocation: 's', tailX: 283, tailY: 83},
   {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, tailLocation: 's', tailX: 353, tailY: 130},
@@ -118,7 +118,7 @@ function cb(){
 	include 'menu.php';
 ?>
 <div id="third-demo" class="demo">
-  <h2>Picture dictionary interactive module</h2>
+  <h2>Interactive picture dictionary module</h2>
   <div id="third-demo-output" class="demo-output">
     <div id="pict5-comic-bubbles-output"></div>
   </div>
@@ -133,7 +133,7 @@ function <button id="btn5" onclick="vegetables()">vegetables()</button>{
 var vegetables_cb, click = 0,
     v = ["seler", "marchew", "burak", "pietruszka", "ziemniak", "czosnek", "cebula"]<wbr>.sort(function(){ return .5 - Math.random(); });
 
-vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, fontSize: '22px', fontWeight: 'bold', textAlign: 'center', color: '#8b0000', bubbleStyle: 'arrow'}}, {bubble: [
+vegetables_cb = new ComicBubbles("pict5", {canvas: {width: 130, height: 36, fontSize: '22px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#8b0000', bubbleStyle: 'arrow'}}, {bubble: [
 	{id: 'v1', name: "kalarepa", text: "kalarepa", x: 35, y: 70, color: '#0000cd', tailLocation: 'se', tailX: 216, tailY: 205},
 	{id: 'v2', name: "seler", text: "click", x: 635, y: 70, tailLocation: 'sw', tailX: 592, tailY: 147},
 	{id: 'v3', name: "marchew", text: "click", x: 35, y: 215, tailLocation: 'e', tailX: 232, tailY: 249},
@@ -202,7 +202,7 @@ function finishTest(){
   </div>
   <div class="left">
 <pre class="sh_javascript_dom">
-var camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
+var camels_cb = new ComicBubbles("pict4", {canvas: {fontFamily: 'Georgia', fontSize: '13px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, opacity: 0.6, bubbleStyle: 'arrow'}}, {bubble: [
   {id: 'b1', text: "My father", x: 127, y: 20, width: 91, height: 21, background: '#1e90ff', tailLocation: 's', tailX: 173, tailY: 83},
   {id: 'b2', text: "My uncle", x: 237, y: 20, width: 91, height: 21, background: '#00ff7f', tailLocation: 's', tailX: 283, tailY: 83},
   {id: 'b3', text: "Me", x: 340, y: 60, width: 'auto', height: 21, fontFamily: 'Arial', fontSize: '15px', background: '#dc143c', color: '#ffff00', opacity: 1, tailLocation: 's', tailX: 353, tailY: 130},

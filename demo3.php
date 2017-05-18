@@ -19,7 +19,7 @@ var im, im_loader;
 
 function bedouin(){
   var bedouin_cb, saving;
-  bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', readonly: false}});
+  bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false}});
   bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
   bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
   var b = bedouin_cb.getBubbleById('bedouin1'),
@@ -108,7 +108,7 @@ function outputOnOff(b){
 <pre class="sh_javascript_dom">
 function <button id="btn6" onclick="bedouin()">bedouin()</button>{
 
-bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', readonly: false}});
+bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false}});
 
 bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
 bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
