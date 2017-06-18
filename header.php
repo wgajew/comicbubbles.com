@@ -7,7 +7,7 @@ function is_localhost(){
 <title>ComicBubbles - speech balloon JavaScript library</title>
 <meta charset="utf-8">
 <meta name="description" content="ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech bubbles to photos. ComicBubbles bubbles can be saved as JavaScript objects or merged with the original image.">
-<meta name="keywords" content="speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
+<meta name="keywords" content="add text to photo, add text to image, caption photo, add caption to image, adding captions to pictures, speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
 <link href="sh_peachpuff.css" rel="stylesheet">
 <link href="comicbubbles.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

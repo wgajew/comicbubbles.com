@@ -19,12 +19,12 @@ function people(){
 	]});
 	people_cb.addBubble({id: 'next1', text: "NEXT", x: 684, y: 466, width: 88, height: 38, fontFamily: 'Arial Black', background: '#ff4500', color: '#ffffff', opacity: 1, bubbleStyle: 'arrow', tailLocation: 'e', tailX: 793, tailY: 485, visible: false});
 	var bub1 = people_cb.getBubbleById('bub1'), bub2 = people_cb.getBubbleById('bub2'), bub3 = people_cb.getBubbleById('bub3'), next1 = people_cb.getBubbleById('next1');
-	bub1.delay(1000).fadeIn();
+	bub1.delay(1000).pumpUp();
 	bub2.delay(3000).fadeIn();
-	bub3.delay(5000).fadeIn(function(){ next1.show(); });
+	bub3.delay(5000).pumpUp(function(){ next1.show(); });
 	next1.onMouseEvent(function(){
 		next1.delay(100).remove();
-		bub1.hide().setText("C'mon,\nwe want details!").setX(249).setY(373).setWidth(115).setHeight(109).setTailLocation('nw').setTailX(208).setTailY(328).delay(2000).fadeIn(200);
+		bub1.hide().setText("Come on,\nwe want details!").setX(249).setY(373).setWidth(115).setHeight(109).setTailLocation('nw').setTailX(208).setTailY(328).delay(2000).fadeIn(200);
 		bub2.hide().setText("Don't be\nso shy!").setX(443).setY(373).setWidth(117).setHeight(77).setTailLocation('ne').setTailX(597).setTailY(314).delay(200).fadeIn();
 		bub3.hide().setText("To tell or\nnot to tell?..").setX(166).setY(8).setWidth('auto').setHeight('auto').setFontSize('19px').setFontWeight('normal').setOpacity(0.6).setTailLocation('se').setTailX(357).setTailY(80).delay(4000).fadeIn(function(){
 			people_cb.setReadonly(false);
@@ -128,13 +128,13 @@ var bub1 = people_cb<wbr>.getBubbleById('bub1'),
     bub3 = people_cb<wbr>.getBubbleById('bub3'),
     next1 = people_cb<wbr>.getBubbleById('next1');
 
-bub1<wbr>.delay(1000)<wbr>.fadeIn();
+bub1<wbr>.delay(1000)<wbr>.pumpUp();
 bub2<wbr>.delay(3000)<wbr>.fadeIn();
-bub3<wbr>.delay(5000)<wbr>.fadeIn(function(){ next1<wbr>.show(); });
+bub3<wbr>.delay(5000)<wbr>.pumpUp(function(){ next1<wbr>.show(); });
 
 next1<wbr>.onMouseEvent(function(){
   next1<wbr>.delay(100)<wbr>.remove();
-  bub1<wbr>.hide()<wbr>.setText("C'mon,\nwe want details!")<wbr>.setX(249)<wbr>.setY(373)<wbr>.setWidth(115)<wbr>.setHeight(109)<wbr>.setTailLocation('nw')<wbr>.setTailX(208)<wbr>.setTailY(328)<wbr>.delay(2000)<wbr>.fadeIn(200);
+  bub1<wbr>.hide()<wbr>.setText("Come on,\nwe want details!")<wbr>.setX(249)<wbr>.setY(373)<wbr>.setWidth(115)<wbr>.setHeight(109)<wbr>.setTailLocation('nw')<wbr>.setTailX(208)<wbr>.setTailY(328)<wbr>.delay(2000)<wbr>.fadeIn(200);
   bub2<wbr>.hide()<wbr>.setText("Don't be\nso shy!")<wbr>.setX(443)<wbr>.setY(373)<wbr>.setWidth(117)<wbr>.setHeight(77)<wbr>.setTailLocation('ne')<wbr>.setTailX(597)<wbr>.setTailY(314)<wbr>.delay(200)<wbr>.fadeIn();
   bub3<wbr>.hide()<wbr>.setText("To tell or\nnot to tell?..")<wbr>.setX(166)<wbr>.setY(8)<wbr>.setWidth('auto')<wbr>.setHeight('auto')<wbr>.setFontSize('19px')<wbr>.setFontWeight('normal')<wbr>.setOpacity(0.6)<wbr>.setTailLocation('se')<wbr>.setTailX(357)<wbr>.setTailY(80)<wbr>.delay(4000)<wbr>.fadeIn(function(){
     people_cb<wbr>.setReadonly(false);
