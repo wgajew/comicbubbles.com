@@ -76,6 +76,11 @@ bubble_settings: Object, optional<br><br>
     <td>&quot;left&quot; or &quot;center&quot; or &quot;right&quot; or &quot;justify&quot;</td>
   </tr>
   <tr>
+    <td>lineHeight</td>
+    <td>1.2</td>
+    <td>0.1 - 3</td>
+  </tr>
+  <tr>
     <td>background</td>
     <td>&quot;#ffffff&quot;</td>
     <td>hex value</td>
@@ -174,6 +179,11 @@ bubble_settings: Object, optional<br><br>
     <td>textAlign</td>
     <td>canvas_settings.canvas.textAlign</td>
     <td>&quot;left&quot; or &quot;center&quot; or &quot;right&quot; or &quot;justify&quot;</td>
+  </tr>
+  <tr>
+    <td>lineHeight</td>
+    <td>canvas_settings.canvas.lineHeight</td>
+    <td>0.1 - 3</td>
   </tr>
   <tr>
     <td>background</td>
@@ -468,6 +478,11 @@ callback: function, optional
 <p>
 x: Number, required<br>
 y: Number, required<br>
+speed: 'slowest'|'slower'|'slow'|'fast'|'faster'|'fastest', optional<br>
+callback: function, optional
+</p>
+<h4>pumpUp(speed, callback)<span>returns</span><span>Bubble</span></h4>
+<p>
 speed: 'slowest'|'slower'|'slow'|'fast'|'faster'|'fastest', optional<br>
 callback: function, optional
 </p>
