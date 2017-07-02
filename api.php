@@ -26,10 +26,10 @@ canvas_settings: Object, optional<br>
 bubble_settings: Object, optional<br><br>
 <span style="color: red; font-size: 13px">If you want to destroy MyBubbles, call DestroyComicBubbles(MyBubbles)</span>
 </p>
-<h3>Setting properties</h3>
+<h3>Properties</h3>
 <h4>var canvas_settings = {canvas: canvas_properties}</h4>
 <h4>canvas_properties</h4>
-<table>
+<table id="canvas-properties">
   <tr>
     <th>property</th>
     <th>default</th>
@@ -114,7 +114,7 @@ bubble_settings: Object, optional<br><br>
 <br>
 <h4>var bubble_settings = {bubble: bubble_properties}</h4>
 <h4>bubble_properties</h4>
-<table>
+<table id="bubble-properties">
   <tr>
     <th>property</th>
     <th>default</th>

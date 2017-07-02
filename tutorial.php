@@ -19,94 +19,105 @@ function teddy(){
 	include 'menu.php';
 ?>
 <div class="main">
-  <h2>1. Adding the library to an HTML page</h2>
-  <p>
-  ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech balloons to photos. The library consists of two files. The main file - comicbubbles.js - is used to display speech bubbles defined as JavaScript objects. Thanks to the other one - comicbubbles_editor.js - you can create and modify bubbles with mouse actions. Both files should be placed inside the &lt;head&gt; section of an HTML page with a &lt;script&gt; tag.
-  </p>
+
+<h2>I. Adding ComicBubbles to a web page</h2>
+<ol>
+<li>Unzip comicbubbles.zip.</li>
+<li>Copy comicbubbles.min.js and comicbubbles_editor.min.js into your web directory.</li>
+<li>Include comicbubbles.min.js and comicbubbles_editor.min.js in your HTML page.<br>
 <pre>
 &lt;head&gt;
-  &lt;script src="comicbubbles.min.js"&gt;&lt;/script&gt;
-  &lt;script src="comicbubbles_editor.min.js"&gt;&lt;/script&gt;
+	&lt;script src="comicbubbles.min.js"&gt;&lt;/script&gt;
+	&lt;script src="comicbubbles_editor.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 </pre>
+<p><b>Note:</b> An alternative method is to put the library files at the very end of the body tag (before &lt;/body&gt;)</p>
+</li>
+</ol>
 
-  <h2>2. Calling ComicBubbles with the id of an image</h2>
+<h2>II. Creating ComicBubbles bubbles</h2>
+<ol>
+<li>Prepare an output box for data produced by ComicBubbles.
+<p>As the output box you can use a &lt;div&gt; element.<br>
+For your convenience place the element next to the image you want to add bubbles to.<br>Make sure that the id of the output box begins with the id of the image and ends with the suffix '-comic-bubbles-output'.</p>
+<pre>
+&lt;img id="my_image_id" src="my_image.jpg"&gt;
+&lt;div id="my_image_id-comic-bubbles-output"&gt;&lt;/div&gt;
+</pre>
+</li>
+<li>Call ComicBubbles with the id of the image you want to add bubbles to.<br>
 <pre>
 &lt;script&gt;
-  var MyBubbles = new ComicBubbles("my_image_id", {canvas: { readonly: false }});
+	var myBubbles = new ComicBubbles('my_image_id', {canvas: { readonly: false }});
 &lt;/script&gt;
 </pre>
-
-  <h2>3. Preparing the ComicBubbles output box</h2>
-  <p>
-  While adding and modifying ComicBubbles bubbles lots of parameters change. A current state of the settings can be displayed inside a &lt;div&gt; (or any other HTML block element). The element (output box) can be placed anywhere in the &lt;body&gt; section. In order that it could work its id must begin with the id of the image and end with the suffix '-comic-bubbles-output'.
-  </p>
+<p><b>Note:</b> If you want to add and edit bubbles with a mouse you have to set the readonly property to false (by default it is set to true). You can preset several other properties too. Use the <a href="./api#canvas-properties">table</a> for your reference. If you, for example, need 25px Verdana as a default font for newly created bubbles, you should create a new ComicBubbles object in the following way:</p>
 <pre>
-&lt;body&gt;
-  &lt;img id="my_image_id" src="my_image.jpg"&gt;
-  &lt;div id="my_image_id-comic-bubbles-output"&gt;&lt;/div&gt;
-&lt;/body&gt;
+var myBubbles = new ComicBubbles('my_image_id', {canvas: { readonly: false, fontFamily: 'Verdana', fontSize: 25 }});
 </pre>
-  <br>
-  <h2>4. Adding and modifying bubbles with mouse actions</h2>
-  <video width="720" height="336" controls>
-    <source src="boy_and_teddy.mp4" type="video/mp4">
-    <source src="boy_and_teddy.ogg" type="video/ogg">
-    <source src="boy_and_teddy.webm" type="video/webm">
-    Your browser does not support the video tag
-  </video>
-  <br>
-  <h3>4.1. Adding a new bubble</h3>
-  <p>Double clicking on the image produces a new bubble which has no style (bubbleStyle = 'none')</p>
-  <img src="t1.png" width="720" height="180">
-  <h3>4.2. Changing the style</h3>
-  <h4>Switching on the default style (bubbleStyle = 'speak')</h4>
-  <p>Turning the rectangular field into a 'proper' speech balloon can be done by double clicking on any of the 8 square dots which are on the red outline</p>
-  <img src="t2.png" width="720" height="180">
-  <h4>Changing the bubbleStyle to 'think'</h4>
-  <p>Double clicking on the bubble tail changes the style</p>
-  <img src="t3.png" width="720" height="180">
-  <h4>Changing the bubbleStyle to 'scream'</h4>
-  <img src="t4.png" width="720" height="180">
-  <h4>Changing the bubbleStyle to 'arrow'</h4>
-  <img src="t5.png" width="720" height="180">
-  <h4>Switching the bubbleStyle off (bubbleStyle = 'none')</h4>
-  <p>Double clicking on the bubble tail ending removes the style</p>
-  <img src="t6.png" width="720" height="180">
-  <h3>4.3. Editing a bubble</h3>
-  <h4>Selecting a bubble for editing</h4>
-  <p>Each editable bubble (readonly = false) can be selected by clicking</p>
-  <img src="t7.png" width="720" height="180">
-  <h4>Entering a text</h4>
-  <p style="color: red;">The text field of a selected bubble is not well suited for interpreting HTML tags. Copying website content and pasting it in with HTML formatting should be avoided (can cause unexpected effects).</p>
-  <img src="t8.png" width="720" height="180">
-  <h4>Formatting</h4>
-  <p>The text can be formatted with a limited set of features which become available after clicking the 's' button.</p>
-  <img src="t9.png" width="720" height="260">
-  <h4>Deselecting</h4>
-  <p>Clicking anywhere in the picture (outside the bubble) makes the selection frame disappear.</p>
-  <img src="t10.png" width="720" height="200">
-  <br>
-  <h3>4.4. Deleting a bubble</h3>
-  <ol>
-  <li>Select a bubble</li>
-  <li>Press 'Delete'</li>
-  </ol>
-  <br>
-  <h2>5. Saving bubble data</h2>
-  <p>Bubble data can be obtained either from the output box or with API functions. The contents of the output box can be manually copied into a website file. On the other hand the API provides automatic means of collecting bubble parametres for further processing (e.g. inserting into a database).</p>
-  <br>
-  <h2>6. Try it yourself</h2>
-  <p>Use your mouse to add bubbles to the picture below. Modify the bubbles and watch the ComicBubbles output box.</p>
-  <div>
-    <span>Image (id='my_image_id')</span>
-    <span>Output box (id='my_image_id-comic-bubbles-output')</span>
-    <div class="img">
-      <img id="my_image_id" src="boy.jpg" width="360" height="300" onload="teddy();">
-    </div>
-    <div id="my_image_id-comic-bubbles-output" class="output"></div>
-    <div class="clear"></div>
-  </div>
+</li>
+<li>Watch the video.<br>
+<video width="720" height="336" controls>
+	<source src="boy_and_teddy.mp4" type="video/mp4">
+	<source src="boy_and_teddy.ogg" type="video/ogg">
+	<source src="boy_and_teddy.webm" type="video/webm">
+	Your browser does not support the video tag
+</video>
+</li>
+<li>Use the following mouse actions to add and modify your ComicBubbles bubbles.
+<h4>&bull; double click on the image to add a new bubble (simple text field)</h4>
+<img src="t1.jpg" width="684" height="244">
+<h4>&bull; double click on one of 8 square dots of the red outline to turn the bubble without any style into a 'proper' speech balloon</h4>
+<img src="t2.jpg" width="684" height="244">
+<h4>&bull; keep double clicking on the tail of the bubble to change the style (speak&rarr; think&rarr; scream&rarr; arrow&rarr; speak)</h4>
+<img src="t3.jpg" width="684" height="244">
+<h4>&bull; double click on the bubble tail ending to remove the style</h4>
+<img src="t4.jpg" width="684" height="244">
+<h4>&bull; click on the image outside the bubble to remove the red selection frame</h4>
+<img src="t5.jpg" width="684" height="244">
+<h4>&bull; click on the bubble to add the selection frame</h4>
+<img src="t6.jpg" width="684" height="244">
+<h4>&bull; click on the bubble inside the selection frame and type some text</h4>
+<p style="color: red;"><b>Note:</b> The text field of a bubble is not well suited for interpreting HTML tags. Copying website content and pasting it in with HTML formatting should be avoided (can cause unexpected effects).</p>
+<img src="t7.jpg" width="684" height="244">
+<h4>&bull; drag and drop to move/resize the bubble and to move the tail ending</h4>
+<img src="t8.jpg" width="684" height="244">
+<h4>&bull; click the 's' button to display the settings box and format the bubble</h4>
+<img src="t9.jpg" width="684" height="270">
+<h4>&bull; If you want to remove a bubble, select it and press 'Delete'.</h4>
+</li>
+<li>Save your ComicBubbles bubbles.
+<p>After customizing your ComicBubbles bubbles you should copy the bubbles data from the output box and save it to a database or to a file. You can either save a single bubble definition, e.g.</p>
+<pre>
+{id: 'b1492710096339', text: "Nobody wants\nto play with me", x: 161, y: 22, width: 115, height: 55, fontSize: '17px', background: '#dc143c', opacity: 1, bubbleStyle: 'speak', tailLocation: 'sw', tailX: 120, tailY: 173}
+</pre>
+<p>or the whole 'new ComicBubbles' syntax.<br>
+If you need more control over bubble data, use API functions (getText(), getX(), getY(), etc.) and save the properties separately.</p>
+</li>
+</ol>
+
+<h2>III. Displaying ComicBubbles bubbles</h2>
+<ol>
+<li>Add comicbubbles.min.js to your HTML page.<br>
+<pre>
+&lt;head&gt;
+	&lt;script src="comicbubbles.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</pre>
+</li>
+<li>Call ComicBubbles with the id of your image and with your bubble definition.<br>
+<pre>
+&lt;script&gt;
+
+var myBubbles = new ComicBubbles('my_image_id', {bubble:
+{id: 'b1492710096339', text: "Nobody wants\nto play with me", x: 161, y: 22, width: 115, height: 55, fontSize: '17px', background: '#dc143c', opacity: 1, bubbleStyle: 'speak', tailLocation: 'sw', tailX: 120, tailY: 173}
+});
+
+&lt;/script&gt;
+</pre>
+<p><b>Note:</b> You can omit the canvas readonly property unless you want to let others create their own bubbles over your image. A bubble definition can include all properties from the <a href="./api#bubble-properties">table</a>.</p>
+</li>
+</ol>
 </div>
 <?php include 'footer.php'; ?>
 </body>

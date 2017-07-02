@@ -16,7 +16,8 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main .menu span { font-size: 21px; margin: 0 7px; font-weight: bold; color: #f2f2f2; }
 #index_main .fl { float: left; width: 369px; height: 470px; background: #fff; border-right: 1px solid #f2f2f2; padding: 0 15px; position: relative; }
 #index_main .fl .box { width: 380px; height: 305px; position: absolute; bottom: 0; left: 0; border-bottom: 1px solid #f2f2f2; }
-#index_main .fl.right { width: 400px; border-right: 0; padding: 0; }
+#index_main .fl.right { width: 400px; border-right: 0; padding: 0; position: relative; }
+#index_main .fl.right > div { position: absolute; left: 0; top: 0; width: 150px; height: 37px; background: #fff; }
 #index_main h1 { color: #7e81a8; font-family: Verdana; font-size: 31px; }
 #index_main p, #index_main ol { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ol { padding: 0 10px 0 18px; line-height: 22px; }
@@ -80,16 +81,22 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .tutorial p.comic-bubbles-output { color: #fff; }
 .tutorial pre { margin: 10px 0; }
 .tutorial .img { float: left; width: 360px; height: 300px; }
-.tutorial .output { float: left; font-size: 14px; font-family: monospace; padding: 4px 1px 1px 4px; width: 355px; height: 295px; background: #000; color: #fff; }
+.tutorial .output { float: left; font-size: 14px; font-family: monospace; padding: 4px 1px 1px 4px; width: 345px; height: 295px; background: #000; color: #fff; }
 .tutorial .clear { clear: both; }
-.tutorial h2 { clear: both; font-size: 23px; height: auto; }
+.tutorial h2 { clear: both; font-size: 25px; height: auto; padding-left: 0; }
 .tutorial > div > div { position: relative; margin-top: 25px; padding-bottom: 40px; }
 .tutorial > div > div > span { position: absolute; top: -20px; right: 0; font: 12px Verdana; color: gray; }
 .tutorial > div > div > span:first-of-type { right: auto; left: 0; }
 .tutorial h3 { font-size: 18px; margin: 30px 0 10px; }
-.tutorial h4 { font-size: 15px; margin: 20px 0 10px; }
-.tutorial ol { margin: 0; }
-.tutorial ol li { font-size: 15px; }
+.tutorial h4 { font-size: 15px; margin: 30px 0 5px; font-weight: normal; }
+.tutorial li h4:first-child { margin-top: 10px; }
+.tutorial ol { margin: 0; padding-left: 1.2em; margin: 10px 0 40px; }
+.tutorial ol li { font-size: 17px; line-height: 1.7; padding: 10px 0; }
+.tutorial img { display: block; margin: auto; }
+.tutorial video, #try-it-yourself { margin-left: -1.2em; }
+#try-it-yourself { position: relative; margin-top: 25px; }
+#try-it-yourself > span { font: normal 12px Tahoma; position: absolute; top: -17px; left: 0; }
+#try-it-yourself > span:nth-of-type(2) { left: auto; right: 0; }
 #api .main p { font-size: 14px; margin: 0 0 15px; }
 #api h4 { font-size: 15px; margin: 10px 0; }
 #api h4 span { font-size: 10px; font-weight: normal; text-transform: uppercase; margin-left: 5px; }
