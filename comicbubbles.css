@@ -83,7 +83,8 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .tutorial .img { float: left; width: 360px; height: 300px; }
 .tutorial .output { float: left; font-size: 14px; font-family: monospace; padding: 4px 1px 1px 4px; width: 345px; height: 295px; background: #000; color: #fff; }
 .tutorial .clear { clear: both; }
-.tutorial h2 { clear: both; font-size: 25px; height: auto; padding-left: 0; }
+.tutorial h2, #api h2 { clear: both; font-size: 25px; height: auto; padding-left: 0; }
+#api h2:nth-of-type(n+2) { margin-top: 25px; }
 .tutorial > div > div { position: relative; margin-top: 25px; padding-bottom: 40px; }
 .tutorial > div > div > span { position: absolute; top: -20px; right: 0; font: 12px Verdana; color: gray; }
 .tutorial > div > div > span:first-of-type { right: auto; left: 0; }
@@ -93,18 +94,16 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .tutorial ol { margin: 0; padding-left: 1.2em; margin: 10px 0 40px; }
 .tutorial ol li { font-size: 17px; line-height: 1.7; padding: 10px 0; }
 .tutorial img { display: block; margin: auto; }
-.tutorial video, #try-it-yourself { margin-left: -1.2em; }
-#try-it-yourself { position: relative; margin-top: 25px; }
-#try-it-yourself > span { font: normal 12px Tahoma; position: absolute; top: -17px; left: 0; }
-#try-it-yourself > span:nth-of-type(2) { left: auto; right: 0; }
+.tutorial video { margin-left: -1.2em; }
 #api .main p { font-size: 14px; margin: 0 0 15px; }
-#api h4 { font-size: 15px; margin: 10px 0; }
+#api h4 { font-size: 17px; font-weight: normal; margin: 10px 0; }
 #api h4 span { font-size: 10px; font-weight: normal; text-transform: uppercase; margin-left: 5px; }
 #api .main > span, #api h4 span:nth-child(2), #api td, #api th { font-size: 14px; text-transform: none; }
 #api table { width: 100%; border-collapse: collapse; }
-#api td, #api th { border: 1px solid gray; padding: 2px 5px; }
+#api td, #api th { border: 1px solid gray; padding: 5px; }
 #api td:first-child, #api th:first-child { width: 120px; }
 #api td:nth-child(2), #api th:nth-child(2) { width: 270px; }
+#api th { background: #eee; padding: 5px 0; }
 .tutorial > .footer, #api > .footer { background: transparent; }
 #main-menu a.myb { color: #fff49e; }
 #main-menu a.myb.sel { color: #485076; }

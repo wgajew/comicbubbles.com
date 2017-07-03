@@ -16,7 +16,7 @@ function cb(){
 	include 'menu.php';
 ?>
 <div class="main">
-<h3>Basic usage</h3>
+<h2>Basic usage</h2>
 <h4>var MyBubbles = new ComicBubbles(image_id)</h4>
 <span>or</span>
 <h4>var MyBubbles = new ComicBubbles(image_id, canvas_settings, bubble_settings)</h4>
@@ -24,9 +24,9 @@ function cb(){
 image_id: String, required<br>
 canvas_settings: Object, optional<br>
 bubble_settings: Object, optional<br><br>
-<span style="color: red; font-size: 13px">If you want to destroy MyBubbles, call DestroyComicBubbles(MyBubbles)</span>
+<span style="color: red; font-size: 14px"><b>Note:</b> If you want to destroy MyBubbles, call DestroyComicBubbles(MyBubbles)</span>
 </p>
-<h3>Properties</h3>
+<h2>Properties</h2>
 <h4>var canvas_settings = {canvas: canvas_properties}</h4>
 <h4>canvas_properties</h4>
 <table id="canvas-properties">
@@ -53,7 +53,7 @@ bubble_settings: Object, optional<br><br>
   <tr>
     <td>fontFamily</td>
     <td>'Arial'</td>
-    <td>valid fonts:<br>- 'Arial'<br>- 'Arial Black'<br>- 'Comic Sans MS'<br>- 'Courier New'<br>- 'Georgia'<br>- 'Impact'<br>- 'Lucida Console'<br>- 'Lucida Sans Unicode'<br>- 'Palatino Linotype'<br>- 'Tahoma'<br>- 'Times New Roman'<br>- 'Trebuchet MS'<br>- 'Verdana'<br><span style="font-size: 13px"><b>Note:</b> You can also use Google fonts that are requested with a stylesheet link (inside the &lt;head&gt; section)</span></td>
+    <td>valid fonts:<br>- 'Arial'<br>- 'Arial Black'<br>- 'Comic Sans MS'<br>- 'Courier New'<br>- 'Georgia'<br>- 'Impact'<br>- 'Lucida Console'<br>- 'Lucida Sans Unicode'<br>- 'Palatino Linotype'<br>- 'Tahoma'<br>- 'Times New Roman'<br>- 'Trebuchet MS'<br>- 'Verdana'<br><span style="font-size: 13px"><b>Note:</b> You can also use Google fonts (include them inside the &lt;head&gt; section with a stylesheet link)</span></td>
   </tr>
   <tr>
     <td>fontSize</td>
@@ -158,7 +158,7 @@ bubble_settings: Object, optional<br><br>
   <tr>
     <td>fontFamily</td>
     <td>canvas_settings.canvas.fontFamily</td>
-    <td>valid fonts:<br>- 'Arial'<br>- 'Arial Black'<br>- 'Comic Sans MS'<br>- 'Courier New'<br>- 'Georgia'<br>- 'Impact'<br>- 'Lucida Console'<br>- 'Lucida Sans Unicode'<br>- 'Palatino Linotype'<br>- 'Tahoma'<br>- 'Times New Roman'<br>- 'Trebuchet MS'<br>- 'Verdana'<br><span style="font-size: 13px"><b>Note:</b> You can also use Google fonts that are requested with a stylesheet link (inside the &lt;head&gt; section)</span></td>
+    <td>valid fonts:<br>- 'Arial'<br>- 'Arial Black'<br>- 'Comic Sans MS'<br>- 'Courier New'<br>- 'Georgia'<br>- 'Impact'<br>- 'Lucida Console'<br>- 'Lucida Sans Unicode'<br>- 'Palatino Linotype'<br>- 'Tahoma'<br>- 'Times New Roman'<br>- 'Trebuchet MS'<br>- 'Verdana'<br><span style="font-size: 13px"><b>Note:</b> You can also use Google fonts (include them inside the &lt;head&gt; section with a stylesheet link)</span></td>
   </tr>
   <tr>
     <td>fontSize</td>
@@ -236,8 +236,7 @@ bubble_settings: Object, optional<br><br>
     <td>tail pointer y coordinate</td>
   </tr>
 </table>
-<br>
-<h3 style="margin-top: 20px">ComicBubbles object methods</h3>
+<h2>ComicBubbles object methods</h2>
 <h4>getBubbleById(bubble_id)<span>returns</span><span>Bubble</span></h4>
 <p>
 bubble_id: String, required
@@ -328,7 +327,7 @@ bubble_style: String, required
 callback: function, required
 </p>
 <h4>getBubblesData()<span>returns</span><span>Object</span></h4>
-<h3 style="margin-top: 40px">Bubble object methods</h3>
+<h2>Bubble object methods</h2>
 <h4>setId(id, callback)<span>returns</span><span>Bubble</span></h4>
 <p>
 id: String, required<br>
