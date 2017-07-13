@@ -22,7 +22,7 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main p, #index_main ol { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ol { padding: 0 10px 0 18px; line-height: 22px; }
 #index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
-nav { height: 70px; position: relative; overflow: hidden; background: #485076; }
+nav { max-width: 1600px; margin: auto; width: 100%; height: 70px; position: relative; overflow: hidden; background: #485076; }
 #main-cb { width: 180px; height: 70px; float: left; }
 #download-cb { position: absolute; right: 10px; top: 0; height: 70px; text-align: center; }
 #download-cb h3 { margin: 0; padding: 7px 0 0; color: #fff; font-size: 14px; font-family: Verdana; font-weight: bold; letter-spacing: 2px; }
