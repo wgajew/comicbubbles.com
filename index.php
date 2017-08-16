@@ -17,14 +17,18 @@
 			<div class="box"></div>
 			<h1>Add speech balloons to your images with ComicBubbles</h1>
 			<p>
-			ComicBubbles is a JavaScript HTML5 canvas library which provides a simple way for adding speech and thought bubbles to photos and drawings.
+			ComicBubbles is a JavaScript library for creating and displaying speech balloons and other word bubbles on images.
+			<br>
+			The library uses the &lt;canvas&gt; element as a layer for rendering bubble shapes. The bubbles can be saved as JavaScript objects or merged with the original image.
 			</p>
-      <ol>
-        <li>Call ComicBubbles with your image id<br><span>new ComicBubbles("image_id", {canvas: { readonly: false }});</span></li>
-        <li>• Double click to add bubbles/change the style<br>• Enter a short text<br>• Drag and drop to move/resize<br>• Click 's' button to change colors and fonts</li>
-        <li>Save your balloons as a piece of code or merge them with the original image</li>
-        <li>Have fun!</li>
-      </ol>
+			<p>
+			Key features:
+			</p>
+			<ul>
+				<li>small size, framework-independent</li>
+				<li>can produce animated speech/thought/scream balloons</li>
+				<li>API</li>
+			</ul>
 			</div>
 			<div class="fl right">
 				<img id="pict-01" src="comicbubbles.gif" width="400" height="470">
