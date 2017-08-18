@@ -96,7 +96,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .tutorial img { display: block; margin: auto; }
 .tutorial video { margin-left: -1.2em; }
 #api .main p { font-size: 14px; margin: 0 0 15px; }
-#api h4 { font-size: 17px; font-weight: normal; margin: 10px 0; }
+#api h4 { font-size: 17px; font-weight: normal; margin: 17px 0 5px; }
 #api h4 span { font-size: 10px; font-weight: normal; text-transform: uppercase; margin-left: 5px; }
 #api .main > span, #api h4 span:nth-child(2), #api td, #api th { font-size: 14px; text-transform: none; }
 #api table { width: 100%; border-collapse: collapse; }

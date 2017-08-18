@@ -291,6 +291,11 @@ font_weight: String, required
 text_align: String, required
 </p>
 <h4>getTextAlign()<span>returns</span><span>String</span></h4>
+<h4>setLineHeight(line_height)<span>returns</span><span>ComicBubbles</span></h4>
+<p>
+line_height: Number, required
+</p>
+<h4>getLineHeight()<span>returns</span><span>Number</span></h4>
 <h4>setBackground(background_color)<span>returns</span><span>ComicBubbles</span></h4>
 <p>
 background_color: String, required
@@ -400,6 +405,12 @@ text_align: String, required<br>
 callback: function, optional
 </p>
 <h4>getTextAlign()<span>returns</span><span>String</span></h4>
+<h4>setLineHeight(line_height, callback)<span>returns</span><span>Bubble</span></h4>
+<p>
+line_height: Number, required<br>
+callback: function, optional
+</p>
+<h4>getLineHeight()<span>returns</span><span>Number</span></h4>
 <h4>setBackground(background_color, callback)<span>returns</span><span>Bubble</span></h4>
 <p>
 background_color: String, required<br>
