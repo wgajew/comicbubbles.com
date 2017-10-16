@@ -92,7 +92,6 @@ function outputOnOff(b){
 }
 
 function cb(){
-	<?php include 'cb_is.php'; ?>
 	sh_highlightDocument();
 }
 </script>

@@ -7,9 +7,7 @@
 ?>
 <script>
 var flickr_comicbubbles;
-function cb(){
-	<?php include 'cb_is.php'; ?>
-	
+function cb(){	
 	im = document.getElementById("pict8");
 	im_loader = document.getElementById("img-loader");
 	sh_highlightDocument();

@@ -106,8 +106,19 @@ function outputOnOff(b){
   }
 }
 
+function outputOnOff(b){
+  var c = document.getElementById("third-demo-output");
+  if (c.style.display == "block") {
+    c.style.display = "none";
+    b.innerHTML = "SHOW OUTPUT";
+  }
+  else {
+    c.style.display = "block";
+    b.innerHTML = "HIDE OUTPUT";
+  }
+}
+
 function cb(){
-	<?php include 'cb_is.php'; ?>
 	sh_highlightDocument();
 }
 </script>
@@ -118,7 +129,7 @@ function cb(){
 	include 'menu.php';
 ?>
 <div id="third-demo" class="demo">
-  <h2>Interactive picture dictionary module</h2>
+  <h2>Picture dictionary interactive module</h2>
   <div id="third-demo-output" class="demo-output">
     <div id="pict5-comic-bubbles-output"></div>
   </div>

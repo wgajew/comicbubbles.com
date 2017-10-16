@@ -32,13 +32,8 @@ else {
 <?php
 	include 'header.php';
 ?>
-<script>
-function cb(){
-	<?php include 'cb_is.php'; ?>
-}
-</script>
 </head>
-<body class="contact" onload="cb()">
+<body class="contact">
 <?php
 	$page = "contact";
 	include 'menu.php';

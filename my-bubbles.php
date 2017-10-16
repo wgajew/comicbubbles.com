@@ -112,8 +112,6 @@ var container, my_comicbubbles, submit_on_error = true, image_max_width = 800,
 	pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
 
 function cb(){
-	<?php include 'cb_is.php'; ?>
-
 	document.getElementById("search-form").onsubmit = function(e) {
 		e.preventDefault();
 		submit_on_error = true;
@@ -167,10 +165,10 @@ function submitForm(form_id) {
 				container.appendChild(img);
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
-				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.80}});
+				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.90}});
 				var pixa = pixabay.split("/");
 				if (img.src.indexOf(pixa[pixa.length-1]) > -1) {
-					my_comicbubbles.setFontSize(25).setHeight(76).setWidth(160).setBackground('#191970').setColor('#ffffff');
+					my_comicbubbles.setFontSize(25).setHeight(76).setWidth(160).setBackground('#8b4513').setColor('#ffffff');
 				}
 				if (my_comicbubbles) {
 					var span = document.getElementById("double-click-span");
@@ -264,7 +262,7 @@ function save(comicbubbles_object,updateImage){
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
-	<h2>Load your photo and <span id="double-click-span">double click</span> to add speech balloons!</h2>
+	<h2>Load your photo and double click to add speech balloons!</h2>
 	<div class="left">
 		<span class="source">Source of Image:&nbsp;</span>
 		<select id="select-source" class="source">

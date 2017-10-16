@@ -1,7 +1,7 @@
 html.ix { height: 100%; }
 body { margin: 0; }
 body.ix { height: 100%; }
-body:not(.ix) { background: #f2f2f2; }
+body:not(.ix) { background: #fff; }
 body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 .demo .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.5; }
 .demo, .cb-spacer, .contact > div { max-width: 1600px; margin: auto; width: 100%; background: #fff; }
@@ -9,11 +9,11 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main { max-width: 1600px; margin: auto; width: 100%; height: 100%; }
 #index_main > div { width: 800px; margin: -280px auto 0 auto; position: relative; top: 50%; }
 #index_main .menu { padding: 8px; border-bottom: 1px solid #f2f2f2; background: #fff; }
-.footer { clear: both; width: 100%; text-align: center; padding: 8px 0; }
+.footer { max-width: 1600px; margin: auto; clear: both; width: 100%; text-align: center; padding: 8px 0; }
 .footer span { font-size: 11px; font-family: Tahoma; text-transform: uppercase; color: #7e81a8; }
-#index_main .menu a { font-size: 14px; font-family: Verdana; font-weight: bold; color: #111B9C; }
-#index_main .menu a:hover { opacity: 0.6; }
-#index_main .menu span { font-size: 21px; margin: 0 7px; font-weight: bold; color: #f2f2f2; }
+#index_main .menu a { font-size: 17px; font-family: Open Sans,Verdana; color: #485076; }
+#index_main .menu a:hover { opacity: 0.8; }
+#index_main .menu span { font-size: 17px; margin: 0 7px; font-family: Verdana; color: #f5ecd3; }
 #index_main .fl { float: left; width: 369px; height: 470px; background: #fff; border-right: 1px solid #f2f2f2; padding: 0 15px; position: relative; }
 #index_main .fl .box { width: 380px; height: 305px; position: absolute; bottom: 0; left: 0; border-bottom: 1px solid #f2f2f2; }
 #index_main .fl.right { width: 400px; border-right: 0; padding: 0; position: relative; }
@@ -22,17 +22,21 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main p, #index_main ul { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ul { padding: 0 10px 0 18px; line-height: 22px; }
 #index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
-nav { margin: auto; width: 100%; height: 70px; position: relative; overflow: hidden; background: #485076; }
-#main-cb { width: 180px; height: 70px; float: left; }
-#download-cb { position: absolute; right: 10px; top: 0; height: 70px; text-align: center; }
-#download-cb h3 { margin: 0; padding: 7px 0 0; color: #fff; font-size: 14px; font-family: Verdana; font-weight: bold; letter-spacing: 2px; }
-#download-cb .down { font-size: 13px; color: #fff; }
-#download-cb .buy { font-family: Tahoma; font-size: 15px; color: #fff49e; position: relative; top: 3px; }
+nav { max-width: 1600px; margin: 0 auto 30px; width: 100%; height: 90px; position: relative; overflow: hidden; background: #fff; }
+#cblogo { display: block; width: 102px; height: 90px; }
 nav .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.2; }
-nav a:not(.down):not(.buy) { display: block; padding: 27px 10px 23px 10px; height: 20px; float: left; font-size: 14px; font-family: Verdana; font-weight: bold; color: #fff; text-align: center; text-decoration: none; }
-nav a:first-child:not(.buy) { margin-left: 20px; }
-nav#main-menu > .sel { background: #C8CBD6; color: #485076; opacity: 1; }
-nav a:not(.sel):not(.down):not(.buy):hover { background: #C8CBD6; color: #fff; }
+#library { position: absolute; left: 107px; top: 63px; width: calc(100% - 245px); font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #000; border-bottom: 1px solid #f5ecd3; height: auto; line-height: 25px; }
+nav > a, #download-cb { display: block; margin-top: 30px; padding: 0 8px; float: right; font-size: 19px; font-family: Open Sans,Verdana; color: #485076; text-align: center; text-decoration: none; }
+nav > a { margin-left: -2px; }
+nav > a:first-child { float: left; padding: 0; margin: 0; }
+nav > .bar { display: block; float: right; width: 2px; height: 20px; background: #f5ecd3; margin-top: 35px; margin-left: -2px; }
+nav#main-menu > .sel { background: #f5ecd3; opacity: 1; }
+nav a:not(.sel):not(.down):not(.buy):hover { background: #f5ecd3; }
+
+#download-cb { margin: 0 0 0 30px; font-weight: normal; position: relative; text-align: left; padding: 32px 0; width: 130px; }
+#download-cb span { letter-spacing: 2px; }
+#download-cb .down { font: 15px Tahoma; color: #666; position: absolute; left: 0; top: 60px; }
+#download-cb .buy { font-family: Tahoma; font-size: 18px; color: #cebd3c; position: absolute; left: 0; top: 5px; }
 .demo .left { padding: 10px 15px; overflow: auto; margin: auto; }
 .demo .right { float: right; width: 800px; margin: auto; }
 .demo .clear { clear: both; }
@@ -58,17 +62,17 @@ pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap;
 #fifth-demo pre { font-size: 14px; }
 #fifth-demo h2 span { font: normal 15px Verdana; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
-#sixth-demo { background: #f2f2f2; }
 #sixth-demo .left { overflow: auto; }
 #sixth-demo .right { position: relative; float: none; width: calc(100% - 30px); }
 #result-container { width: 1280px; margin: auto; position: relative; }
-#result-container.empty { background: #D5D7E5; min-height: 250px; height: calc(100vh - 205px); min-width: 1280px; }
+#result-container.empty { background: #9799ac; min-height: 250px; height: calc(100vh - 260px); min-width: 1280px; }
 #result-container .error { font: 12px Verdana; color: red; }
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
-h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #7e81a8; }
-.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 40px; margin: 40px auto 0; color: #485076; background: #fff; width: calc(100% - 80px); max-width: 720px; font: 19px Verdana; }
+h2 { font-family: Verdana; font-size: 27px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #9799ac; font-weight: normal; }
+.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 20px; margin: 0 auto; color: #485076; background: #fff; width: calc(100% - 40px); max-width: 760px; font: 19px Verdana; }
+.tutorial > div:not(.footer) { padding-bottom: 0; }
 .contact form input[type=text], .contact form textarea { font: 19px Verdana; min-width: 400px; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #485076; background: #fff; padding: 10px; margin: 5px 0 12px; }
 .contact form input.red, .contact form textarea.red { border: 1px solid red; }
 .contact form textarea { min-height: 200px; }
@@ -76,14 +80,14 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .contact form span { color: red; font-size: 17px; }
 .contact h3 { text-align: center; margin: 20px 0 -20px; font: 21px Verdana; color: #3F51B5; }
 .contact form input:nth-of-type(3) { display: none; }
-.contact .footer { background: #f2f2f2; }
+.contact form { height: calc(100vh - 200px); }
 .tutorial p, #api .main p { color: #000; font-size: 15px; line-height: 1.5; margin: 3px 0; }
 .tutorial p.comic-bubbles-output { color: #fff; }
 .tutorial pre { margin: 10px 0; }
 .tutorial .img { float: left; width: 360px; height: 300px; }
 .tutorial .output { float: left; font-size: 14px; font-family: monospace; padding: 4px 1px 1px 4px; width: 345px; height: 295px; background: #000; color: #fff; }
 .tutorial .clear { clear: both; }
-.tutorial h2, #api h2 { clear: both; font-size: 25px; height: auto; padding-left: 0; }
+.tutorial h2, #api h2:not(#library) { clear: both; font-size: 25px; height: auto; padding-left: 0; }
 #api h2:nth-of-type(n+2) { margin-top: 25px; }
 .tutorial > div > div { position: relative; margin-top: 25px; padding-bottom: 40px; }
 .tutorial > div > div > span { position: absolute; top: -20px; right: 0; font: 12px Verdana; color: gray; }
@@ -91,10 +95,9 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 .tutorial h3 { font-size: 18px; margin: 30px 0 10px; }
 .tutorial h4 { font-size: 15px; margin: 30px 0 5px; font-weight: normal; }
 .tutorial li h4:first-child { margin-top: 10px; }
-.tutorial ol { margin: 0; padding-left: 1.2em; margin: 10px 0 40px; }
+.tutorial ol { margin: 0; padding-left: 1.2em; margin: 10px 0 20px; }
 .tutorial ol li { font-size: 17px; line-height: 1.7; padding: 10px 0; }
 .tutorial img { display: block; margin: auto; }
-.tutorial video { margin-left: -1.2em; }
 #api .main p { font-size: 14px; margin: 0 0 15px; }
 #api h4 { font-size: 17px; font-weight: normal; margin: 17px 0 5px; }
 #api h4 span { font-size: 10px; font-weight: normal; text-transform: uppercase; margin-left: 5px; }
@@ -104,8 +107,7 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 #api td:first-child, #api th:first-child { width: 120px; }
 #api td:nth-child(2), #api th:nth-child(2) { width: 270px; }
 #api th { background: #eee; padding: 5px 0; }
-.tutorial > .footer, #api > .footer { background: transparent; }
-#main-menu a.myb { color: #fff49e; }
+#main-menu a.myb { color: #cebd3c; }
 #main-menu a.myb.sel { color: #485076; }
 #fifth-demo-output-btn { position: static; }
 #search-form, #url-form, #file-form { float: left; margin-left: 15px; }
@@ -215,9 +217,8 @@ h2 { font-family: Verdana; font-size: 22px; height: 26px; padding: 15px 0 15px 1
 	.demo .right { float: none; }
 	.demo .left { width: calc(100% - 30px); min-width: 770px; overflow: visible; }
 	#first-demo .left, #second-demo .left, #third-demo .left, #fourth-demo .left, #fifth-demo .left, #sixth-demo .left { height: auto; }
-	#first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { right: 680px; top: -30px; }
-	#main-cb { display: none; }
 	#first-demo .right, #third-demo .right { margin-top: 30px; }
+  #first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { right: 680px; top: -30px; }
 }
 @media screen and (max-width: 1024px) {
 	#result-container { width: 800px; }

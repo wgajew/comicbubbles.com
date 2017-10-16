@@ -5,15 +5,12 @@
 	include 'header.php';
 ?>
 <script>
-function cb(){
-	<?php include 'cb_is.php'; ?>
-}
 function teddy(){
   var my_bubbles = new ComicBubbles("my_image_id", {canvas: {readonly: false}});
 }
 </script>
 </head>
-<body class="tutorial" onload="cb()">
+<body class="tutorial">
 <?php
 	$page = "tutorial";
 	include 'menu.php';

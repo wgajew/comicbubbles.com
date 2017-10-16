@@ -4,13 +4,8 @@
 <?php
 	include 'header.php';
 ?>
-<script>
-function cb(){
-	<?php include 'cb_is.php'; ?>
-}
-</script>
 </head>
-<body id="api" onload="cb()">
+<body id="api">
 <?php
 	$page = "api";
 	include 'menu.php';
