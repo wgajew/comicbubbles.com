@@ -1,5 +1,5 @@
 <nav id="main-menu" class="wg<?php include 'count'; ?>">
-	<a id="cblogo" href="./"><img src="dog_logo2.png"></a>
+	<a id="cblogo" href="./"><img src="dog_logo.gif"></a>
   <h2 id="library">ComicBubbles - speech balloon JavaScript library</h2>
   <h3 id="download-cb">&nbsp;<span>download</span>
     <a href="https://codecanyon.net/item/comicbubbles-speech-balloon-javascript-library/19598432" title="uncompressed js files + support" class="buy">buy on Envato</a>
