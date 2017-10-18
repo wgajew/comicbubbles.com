@@ -34,7 +34,7 @@ nav#main-menu > .sel { background: #f5ecd3; opacity: 1; }
 nav a:not(.sel):not(.down):not(.buy):hover { background: #f5ecd3; }
 
 #download-cb { margin: 0 0 0 30px; font-weight: normal; position: relative; text-align: left; padding: 36px 0; width: 130px; }
-#download-cb span { letter-spacing: 2px; }
+#download-cb > span > span { color: #a0a9c7; font-size: 13px; }
 #download-cb .down { font: 15px Tahoma; color: #666; position: absolute; left: 0; top: 60px; }
 #download-cb .buy { font-family: Tahoma; font-size: 18px; color: #cebd3c; position: absolute; left: 0; top: 5px; }
 .demo .left { padding: 10px 15px; overflow: auto; margin: auto; }
@@ -59,7 +59,7 @@ pre { -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; margin: 0; line-height: 1.5
 #fifth-demo .right { width: 800px; height: 356px; position: relative; float: none; padding: 10px 0 40px; }
 #fifth-demo .right .img { width: 399px; height: 356px; float: left; position: relative; }
 #fifth-demo .right .img > p { width: 398px; text-align: center; position: absolute; left: 0; bottom: -45px; font: 15px Verdana; }
-#fifth-demo pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; width: 100%; margin: 0; line-height: 1.5; font-size: 14px; overflow: hidden; }
+.tutorial pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; width: 100%; overflow: hidden; }
 #fifth-demo h2 span { font: normal 15px Verdana; }
 #img-loader { width: 399px; height: 356px; position: absolute; right: 0; top: 0; display: none; }
 #sixth-demo .left { overflow: auto; }
