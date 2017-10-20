@@ -37,18 +37,19 @@ nav a:not(.sel):not(.down):not(.buy):hover { background: #f5ecd3; }
 #download-cb > span > span { color: #a0a9c7; font-size: 13px; }
 #download-cb .down { font: 15px Tahoma; color: #666; position: absolute; left: 0; top: 60px; }
 #download-cb .buy { font-family: Tahoma; font-size: 18px; color: #cebd3c; position: absolute; left: 0; top: 5px; }
-.demo .left { padding: 10px 15px; overflow: auto; margin: auto; }
+.demo .left { padding: 10px 15px; overflow: auto; margin: auto; background: #fafafa; border-top: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2; }
+.demo .left pre { background: #fafafa; }
 .demo .right { float: right; width: 800px; margin: auto; }
 .demo .clear { clear: both; }
 .cb-spacer { height: 30px; }
 .right img { float: left; }
-#first-demo .left { height: 505px; padding-top: 15px; background: #fff; }
+#first-demo .left { height: 505px; padding-top: 15px; }
 #first-demo .right { height: 530px; position: relative; }
 #third-demo .left { height: 425px; padding-top: 15px; }
 #third-demo .right { height: 450px; position: relative; }
 .demo-output { display: none; font-size: 12px; font-family: monospace; background: #000; color: #fff; padding: 10px 15px; width: calc(100% - 30px); min-width: 770px; border-top: 0; }
 #btn1, #btn2, #btn3, #btn4, #btn5, #btn6 { font-size: 12px; font-family: monospace; }
-#first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { position: absolute; top: 0; right: 820px; width: 120px; padding: 6px 0; font: 12px Arial Black; cursor: pointer; background: #fff; color: #000; text-decoration: underline; z-index: 2; text-align: center; }
+#first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { position: absolute; top: 0; right: 820px; width: 110px; padding: 6px 0; font: 12px Arial; cursor: pointer; background: #fafafa; color: #000; text-decoration: underline; z-index: 2; text-align: center; }
 pre { -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; margin: 0; line-height: 1.5; font-size: 12px; }
 #second-demo .left { height: 399px; padding-top: 15px; }
 #second-demo .right { height: 424px; }
@@ -218,7 +219,7 @@ h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15
 	.demo .left { width: calc(100% - 30px); min-width: 770px; }
 	#first-demo .left, #second-demo .left, #third-demo .left, #fourth-demo .left, #fifth-demo .left, #sixth-demo .left { height: auto; }
 	#first-demo .right, #third-demo .right { margin-top: 30px; }
-  #first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { right: 680px; top: -30px; }
+	#first-demo-output-btn, #third-demo-output-btn, #fifth-demo-output-btn { right: 695px; top: -30px; background: transparent; }
 }
 @media screen and (max-width: 1024px) {
 	#result-container { width: 800px; }

@@ -8,3 +8,4 @@ my_images/*
 img/*
 !img/.gitkeep
 .htaccess
+count
