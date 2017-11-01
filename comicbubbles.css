@@ -22,22 +22,21 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main p, #index_main ul { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ul { padding: 0 10px 0 18px; line-height: 22px; }
 #index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
-nav { max-width: 1600px; margin: 0 auto 30px; width: 100%; height: 90px; position: relative; overflow: hidden; background: #fff; }
-#cblogo { display: block; width: 98px; height: 90px; }
-nav .comic-bubbles-wrapper .cb-bubble-field { line-height: 1.2; }
-#library { position: absolute; left: 105px; top: 63px; width: calc(100% - 115px); font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #000; border-bottom: 1px solid #f5ecd3; height: auto; line-height: 25px; }
+nav { max-width: 1920px; margin: 0 auto 30px; width: 100%; height: 90px; position: relative; overflow: hidden; background: #fafafa; border-bottom: 1px solid #f2f2f2; }
+#cblogo { display: block; width: 90px; height: 90px; }
+#library { position: absolute; left: 95px; top: 63px; font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #000; height: auto; line-height: 25px; }
 nav > a, #download-cb { display: block; margin-top: 35px; padding: 1px 7px; line-height: 18px; float: right; font-size: 17px; font-family: Open Sans,Verdana; color: #485076; text-align: center; text-decoration: none; }
 nav > a { margin-left: -2px; }
 nav > a:first-child { float: left; padding: 0; margin: 0; }
 nav > .bar { display: block; float: right; width: 2px; height: 16px; background: #f5ecd3; margin-top: 37px; margin-left: -2px; }
 nav#main-menu > .sel { background: #f5ecd3; opacity: 1; }
-nav a:not(.sel):not(.down):not(.buy):hover { background: #f5ecd3; }
+nav a:not(.sel):not(.down):not(.buy):not(#cblogo):hover { background: #f5ecd3; }
 
 #download-cb { margin: 0 0 0 30px; font-weight: normal; position: relative; text-align: left; padding: 36px 0; width: 130px; }
 #download-cb > span > span { color: #a0a9c7; font-size: 13px; }
 #download-cb .down { font: 15px Tahoma; color: #666; position: absolute; left: 0; top: 60px; }
 #download-cb .buy { font-family: Tahoma; font-size: 18px; color: #cebd3c; position: absolute; left: 0; top: 5px; }
-.demo .left { padding: 10px 15px; overflow: auto; margin: auto; background: #fafafa; border-top: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2; }
+.demo .left { padding: 10px 15px; overflow: auto; margin: auto; background: #fafafa; }
 .demo .left pre { background: #fafafa; }
 .demo .right { float: right; width: 800px; margin: auto; }
 .demo .clear { clear: both; }
