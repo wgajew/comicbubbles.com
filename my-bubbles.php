@@ -258,7 +258,7 @@ function save(comicbubbles_object,updateImage){
 </head>
 <body onload="cb()" class="ix">
 <?php
-	$page = "my-bubble";
+	$page = "my-bubbles";
 	include 'menu.php';
 ?>
 <div id="sixth-demo" class="demo">
