@@ -10,10 +10,10 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main > div { width: 800px; margin: -280px auto 0 auto; position: relative; top: 50%; }
 #index_main .menu { padding: 8px; border-bottom: 1px solid #f2f2f2; background: #fff; }
 .footer { max-width: 1600px; margin: auto; clear: both; width: 100%; text-align: center; padding: 8px 0; }
-.footer span { font-size: 11px; font-family: Tahoma; text-transform: uppercase; color: #989fa5; }
+.footer span { font-size: 11px; font-family: Tahoma; text-transform: uppercase; color: #d8d8d8; }
 #index_main .menu a { font-size: 15px; font-family: Open Sans,Verdana; color: #788c9e; }
 #index_main .menu a:hover { opacity: 0.8; }
-#index_main .menu span { font-size: 17px; margin: 0 5px; font-family: Verdana; color: #f5ecd3; }
+#index_main .menu span { font-size: 17px; margin: 0 5px; font-family: Verdana; color: #f2f2f2; }
 #index_main .fl { float: left; width: 369px; height: 470px; background: #fff; border-right: 1px solid #f2f2f2; padding: 0 15px; position: relative; }
 #index_main .fl .box { width: 380px; height: 305px; position: absolute; bottom: 0; left: 0; border-bottom: 1px solid #f2f2f2; }
 #index_main .fl.right { width: 400px; border-right: 0; padding: 0; position: relative; }
@@ -22,14 +22,14 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main ul { padding: 0 10px 0 18px; line-height: 22px; }
 #index_main li span { font-size: 18px; color: #989fa5; margin-left: 5px; }
 nav { max-width: 1920px; margin: 0 auto 30px; width: 100%; height: 90px; position: relative; overflow: hidden; background: #fafafa; border-bottom: 1px solid #f2f2f2; }
-#cblogo { display: block; width: 90px; height: 90px; }
-#library { position: absolute; left: 95px; top: 63px; font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #000; height: auto; line-height: 25px; }
-nav > a, #download-cb { display: block; margin-top: 35px; padding: 1px 7px; line-height: 18px; float: right; font-size: 17px; font-family: Open Sans,Verdana; color: #66849f; text-align: center; text-decoration: none; }
+#cblogo { display: block; width: 90px; height: 90px; margin-left: 3px; }
+#library { position: absolute; left: 98px; top: 65px; font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #666; height: auto; line-height: 25px; }
+nav > a, #download-cb { display: block; margin-top: 35px; padding: 1px 7px; line-height: 18px; float: right; font-size: 17px; font-family: Open Sans,Verdana; color: #666; text-align: center; text-decoration: none; }
 nav > a { margin-left: -2px; }
 nav > a:first-child { float: left; padding: 0; margin: 0; }
-nav > .bar { display: block; float: right; width: 2px; height: 16px; background: #fff287; margin-top: 37px; margin-left: -2px; }
-nav#main-menu > .sel { background: #fff287; opacity: 1; }
-nav a:not(.sel):not(.down):not(.buy):not(#cblogo):hover { background: #fff287; }
+nav > .bar { display: block; float: right; width: 2px; height: 16px; background: #d8dde2; margin-top: 37px; margin-left: -2px; }
+nav#main-menu > .sel { background: #d8dde2; opacity: 1; }
+nav a:not(.sel):not(.down):not(.buy):not(#cblogo):hover { background: #d8dde2; }
 
 #download-cb { margin: 0 0 0 30px; font-weight: normal; position: relative; text-align: left; padding: 36px 0; width: 130px; }
 #download-cb > span > span { color: #a0a9c7; font-size: 13px; }
