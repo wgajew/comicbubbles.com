@@ -31,8 +31,7 @@
 			</ul>
 			</div>
 			<div class="fl right">
-				<img id="pict-01" src="big_logo.png" width="400" height="470">
-				<div>&nbsp;</div>
+				<img id="pict-01" src="big_logo.gif" width="400" height="470">
 			</div>
 			<?php include 'footer.php'; ?>
 		</div>

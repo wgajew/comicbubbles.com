@@ -10,22 +10,21 @@ body:not(.ix):not(.contact):not(.tutorial) { overflow-y: scroll; }
 #index_main > div { width: 800px; margin: -280px auto 0 auto; position: relative; top: 50%; }
 #index_main .menu { padding: 8px; border-bottom: 1px solid #f2f2f2; background: #fff; }
 .footer { max-width: 1600px; margin: auto; clear: both; width: 100%; text-align: center; padding: 8px 0; }
-.footer span { font-size: 11px; font-family: Tahoma; text-transform: uppercase; color: #7e81a8; }
-#index_main .menu a { font-size: 15px; font-family: Open Sans,Verdana; color: #485076; }
+.footer span { font-size: 11px; font-family: Tahoma; text-transform: uppercase; color: #989fa5; }
+#index_main .menu a { font-size: 15px; font-family: Open Sans,Verdana; color: #788c9e; }
 #index_main .menu a:hover { opacity: 0.8; }
 #index_main .menu span { font-size: 17px; margin: 0 5px; font-family: Verdana; color: #f5ecd3; }
 #index_main .fl { float: left; width: 369px; height: 470px; background: #fff; border-right: 1px solid #f2f2f2; padding: 0 15px; position: relative; }
 #index_main .fl .box { width: 380px; height: 305px; position: absolute; bottom: 0; left: 0; border-bottom: 1px solid #f2f2f2; }
 #index_main .fl.right { width: 400px; border-right: 0; padding: 0; position: relative; }
-#index_main .fl.right > div { position: absolute; left: 0; top: 0; width: 150px; height: 37px; background: #fff; }
-#index_main h1 { color: #7e81a8; font-family: Open Sans,Verdana; font-size: 29px; font-weight: normal; }
+#index_main h1 { color: #989fa5; font-family: Open Sans,Verdana; font-size: 29px; font-weight: normal; }
 #index_main p, #index_main ul { color: #000; font-family: Verdana; font-size: 14px; line-height: 1.5; }
 #index_main ul { padding: 0 10px 0 18px; line-height: 22px; }
-#index_main li span { font-size: 18px; color: #7e81a8; margin-left: 5px; }
+#index_main li span { font-size: 18px; color: #989fa5; margin-left: 5px; }
 nav { max-width: 1920px; margin: 0 auto 30px; width: 100%; height: 90px; position: relative; overflow: hidden; background: #fafafa; border-bottom: 1px solid #f2f2f2; }
 #cblogo { display: block; width: 90px; height: 90px; }
 #library { position: absolute; left: 95px; top: 63px; font-size: 15px; font-family: Open Sans,Verdana; font-weight: normal; padding: 0; margin: 0; color: #000; height: auto; line-height: 25px; }
-nav > a, #download-cb { display: block; margin-top: 35px; padding: 1px 7px; line-height: 18px; float: right; font-size: 17px; font-family: Open Sans,Verdana; color: #485076; text-align: center; text-decoration: none; }
+nav > a, #download-cb { display: block; margin-top: 35px; padding: 1px 7px; line-height: 18px; float: right; font-size: 17px; font-family: Open Sans,Verdana; color: #66849f; text-align: center; text-decoration: none; }
 nav > a { margin-left: -2px; }
 nav > a:first-child { float: left; padding: 0; margin: 0; }
 nav > .bar { display: block; float: right; width: 2px; height: 16px; background: #fff287; margin-top: 37px; margin-left: -2px; }
@@ -70,10 +69,10 @@ pre { -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; margin: 0; line-height: 1.5
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
-h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #7881BE; font-weight: normal; }
-.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 20px; margin: 0 auto; color: #485076; background: #fff; width: calc(100% - 40px); max-width: 760px; font: 19px Verdana; }
+h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #989fa5; font-weight: normal; }
+.contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 20px; margin: 0 auto; color: #788c9e; background: #fff; width: calc(100% - 40px); max-width: 760px; font: 19px Verdana; }
 .tutorial > div:not(.footer) { padding-bottom: 0; }
-.contact form input[type=text], .contact form textarea { font: 19px Verdana; min-width: 400px; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #485076; background: #fff; padding: 10px; margin: 5px 0 12px; }
+.contact form input[type=text], .contact form textarea { font: 19px Verdana; min-width: 400px; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #788c9e; background: #fff; padding: 10px; margin: 5px 0 12px; }
 .contact form input.red, .contact form textarea.red { border: 1px solid red; }
 .contact form textarea { min-height: 200px; }
 .contact form input[type=submit] { font: 19px Verdana; padding: 5px 30px; }
@@ -117,7 +116,7 @@ h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15
 .left > .form { display: none; }
 .left > .form.show { display: block; }
 #sixth-demo span.source { font: 15px Verdana; }
-#double-click-span { color: #485076; }
+#double-click-span { color: #788c9e; }
 #double-click-span.black { color: #000000; }
 
 .load-container {
