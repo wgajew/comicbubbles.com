@@ -105,6 +105,11 @@ bubble_settings: Object, optional<br><br>
     <td>&quot;none&quot;</td>
     <td>&quot;none&quot; or &quot;speak&quot; or &quot;think&quot; or &quot;scream&quot; or &quot;arrow&quot;</td>
   </tr>
+  <tr>
+    <td>responsive</td>
+    <td>false</td>
+    <td>set to true to adjust bubble positions while resizing the image (responsiveness) <span class="red">v1.3</span></td>
+  </tr>
 </table>
 <br>
 <h4>var bubble_settings = {bubble: bubble_properties}</h4>
@@ -124,6 +129,11 @@ bubble_settings: Object, optional<br><br>
     <td>name</td>
     <td>&quot;&quot;</td>
     <td>can be any string</td>
+  </tr>
+  <tr>
+    <td>className</td>
+    <td>&quot;&quot;</td>
+    <td>can be used in media queries (e.g. to override fontSize) <span class="red">v1.3</span></td>
   </tr>
   <tr>
     <td>text</td>
@@ -232,6 +242,10 @@ bubble_settings: Object, optional<br><br>
   </tr>
 </table>
 <h2>ComicBubbles object methods</h2>
+<h4>onCanvasLoad(callback) <span class="red">v1.3</span></h4>
+<p>
+callback: function, required
+</p>
 <h4>getBubbleById(bubble_id)<span>returns</span><span>Bubble</span></h4>
 <p>
 bubble_id: String, required
@@ -316,6 +330,11 @@ readonly: Boolean, required
 settable: Boolean, required
 </p>
 <h4>isSettable()<span>returns</span><span>Boolean</span></h4>
+<h4>setResponsive(responsive)<span>returns</span><span>ComicBubbles</span> <span class="red">v1.3</span></h4>
+<p>
+responsive: Boolean, required
+</p>
+<h4>isResponsive()<span>returns</span><span>Boolean</span> <span class="red">v1.3</span></h4>
 <h4>setBubbleStyle(bubble_style)<span>returns</span><span>ComicBubbles</span></h4>
 <p>
 bubble_style: String, required
@@ -346,6 +365,12 @@ text: String, required<br>
 callback: function, optional
 </p>
 <h4>getText()<span>returns</span><span>String</span></h4>
+<h4>setClassName(class_name, callback)<span>returns</span><span>Bubble</span> <span class="red">v1.3</span></h4>
+<p>
+class_name: String, required<br>
+callback: function, optional
+</p>
+<h4>getClassName()<span>returns</span><span>String</span> <span class="red">v1.3</span></h4>
 <h4>setX(x, callback)<span>returns</span><span>Bubble</span></h4>
 <p>
 x: Number, required<br>

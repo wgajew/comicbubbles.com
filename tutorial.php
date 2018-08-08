@@ -63,24 +63,24 @@ var myBubbles = new ComicBubbles('my_image_id', {canvas: { readonly: false, font
 </li>
 <li>Use the following mouse actions to add and modify your ComicBubbles bubbles.
 <h4>&bull; double click on the image to add a new bubble (simple text field)</h4>
-<img src="t1.jpg" width="684" height="244">
+<img src="t1.jpg">
 <h4>&bull; double click on one of 8 square dots of the red outline to turn the bubble without any style into a 'proper' speech balloon</h4>
-<img src="t2.jpg" width="684" height="244">
+<img src="t2.jpg">
 <h4>&bull; keep double clicking on the tail of the bubble to change the style (speak&rarr; think&rarr; scream&rarr; arrow&rarr; speak)</h4>
-<img src="t3.jpg" width="684" height="244">
+<img src="t3.jpg">
 <h4>&bull; double click on the bubble tail ending to remove the style</h4>
-<img src="t4.jpg" width="684" height="244">
+<img src="t4.jpg">
 <h4>&bull; click on the image outside the bubble to remove the red selection frame</h4>
-<img src="t5.jpg" width="684" height="244">
+<img src="t5.jpg">
 <h4>&bull; click on the bubble to add the selection frame</h4>
-<img src="t6.jpg" width="684" height="244">
+<img src="t6.jpg">
 <h4>&bull; click on the bubble inside the selection frame and type some text</h4>
 <p style="color: red;"><b>Note:</b> The text field of a bubble is not well suited for interpreting HTML tags. Copying website content and pasting it in with HTML formatting should be avoided (can cause unexpected effects).</p>
-<img src="t7.jpg" width="684" height="244">
+<img src="t7.jpg">
 <h4>&bull; drag and drop to move/resize the bubble and to move the tail ending</h4>
-<img src="t8.jpg" width="684" height="244">
+<img src="t8.jpg">
 <h4>&bull; click the 's' button to display the settings box and format the bubble</h4>
-<img src="t9.jpg" width="684" height="270">
+<img src="t9.jpg">
 <h4>&bull; If you want to remove a bubble, select it and press 'Delete'.</h4>
 </li>
 <li>Save your ComicBubbles bubbles.

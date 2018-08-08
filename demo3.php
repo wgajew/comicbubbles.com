@@ -11,30 +11,37 @@ function cb(){
 	im = document.getElementById("pict8");
 	im_loader = document.getElementById("img-loader");
 	sh_highlightDocument();
+  bedouin();
 }
 
-var im, im_loader;
+var Camel, im, im_loader;
 
 function bedouin(){
-  var bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false}}),
-  saving;
-  bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
-  bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
-  var b = bedouin_cb.getBubbleById('bedouin1'),
-    c = bedouin_cb.getBubbleById('camel1');
-  b.delay(2000).show(function(){
-    c.delay(2000).show();
-    bedouin_cb.onBubbleStateChange(function(data){
-      clearTimeout(saving);
-      saving = setTimeout(function(){
-        im_loader.style.display = "block";
-        save(bedouin_cb,function(){
-          im.onload = function(){
-            im_loader.style.display = "none";
-          }
-          im.src = "cb_images/bedouin.jpg?t=" + new Date().getTime();
-        });
-      },500);
+  DestroyComicBubbles(Camel);
+  
+  Camel = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false, responsive: true}});
+  
+  var saving;
+  
+  Camel.onCanvasLoad(function(){
+    this.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
+    this.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
+    var b = this.getBubbleById('bedouin1'),
+      c = this.getBubbleById('camel1');
+    b.delay(2000).show(function(){
+      c.delay(2000).show();
+      Camel.onBubbleStateChange(function(data){
+        clearTimeout(saving);
+        saving = setTimeout(function(){
+          im_loader.style.display = "block";
+          save(Camel,function(){
+            im.onload = function(){
+              im_loader.style.display = "none";
+            }
+            im.src = "cb_images/bedouin.jpg?t=" + new Date().getTime();
+          });
+        },500);
+      });
     });
   });
 }
@@ -88,12 +95,12 @@ function outputOnOff(b){
   <h2>Saving images with bubbles <span>(autosave example)</span></h2>
   <div class="right">
     <div class="img">
-			<p>Image with ComicBubbles object (<span id="fifth-demo-output-btn" onclick="outputOnOff(this)">SHOW</span>)</p>
-      <img id="pict6" src="bedouin.jpg" width="399" height="356" onload="bedouin()">
+			<p>Image with ComicBubbles object <span id="fifth-demo-output-btn" onclick="outputOnOff(this)">(SHOW)</span></p>
+      <img id="pict6" src="bedouin.jpg">
     </div>
     <div class="img" id="saved-image">
 			<p>Image with hardcoded speech balloons</p>
-      <img id="pict8" width="399" height="356" src="bedouin.jpg">
+      <img id="pict8" src="bedouin.jpg">
     </div>
     <div id="img-loader">
       <div class="load-container"><div class="loader"></div></div>
@@ -104,31 +111,38 @@ function outputOnOff(b){
 	</div>
   <div class="left">
 <pre class="sh_javascript_dom">
+var Camel, im, im_loader;
 function <button id="btn6" onclick="bedouin()">bedouin()</button>{
 
-var bedouin_cb = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false}}),
-	saving;
-	
-bedouin_cb.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
-bedouin_cb.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
+DestroyComicBubbles(Camel);
 
-var b = bedouin_cb.getBubbleById('bedouin1'),
-	c = bedouin_cb.getBubbleById('camel1');
+Camel = new ComicBubbles("pict6", {canvas: {width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.5, readonly: false, responsive: true}});
 
-b.delay(2000).show(function(){
-	c.delay(2000).show();
-	bedouin_cb.onBubbleStateChange(function(data){
-		clearTimeout(saving);
-		saving = setTimeout(function(){
-			im_loader.style.display = "block";
-			save(bedouin_cb,function(){
-				im.onload = function(){
-					im_loader.style.display = "none";
-				}
-				im.src = "cb_images/bedouin.jpg?t=" + new Date().getTime();
-			});
-		},500);
-	});
+var saving;
+
+Camel.onCanvasLoad(function(){
+  
+  this.addBubble({id: 'bedouin1', text: "I wish you\ncould speak", x: 127, y: 210, background: '#b22222', color: '#ffffff', opacity: 0.9, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 105, tailY: 145, visible: false});
+  this.addBubble({id: 'camel1', text: "I wish you\nhad humps\non your back", x: 221, y: 25, background: '#ffa500', color: '#ffffff', opacity: 0.7, bubbleStyle: 'think', tailLocation: 's', tailX: 295, tailY: 176, visible: false});
+  
+  var b = this.getBubbleById('bedouin1'), c = this.getBubbleById('camel1');
+  
+  b.delay(2000).show(function(){
+    c.delay(2000).show();
+    Camel.onBubbleStateChange(function(data){
+      clearTimeout(saving);
+      saving = setTimeout(function(){
+        im_loader.style.display = "block";
+        save(Camel,function(){
+          im.onload = function(){
+            im_loader.style.display = "none";
+          }
+          im.src = "cb_images/bedouin.jpg?t=" + new Date().getTime();
+        });
+      },500);
+    });
+  });
+  
 });
   
 }

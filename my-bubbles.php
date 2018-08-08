@@ -108,7 +108,7 @@ else {
 	include 'header.php';
 ?>
 <script>
-var container, my_comicbubbles, submit_on_error = true, image_max_width = 800,
+var container, myComicBubbles, submit_on_error = true, image_max_width = 800,
 	pixabay = "https://cdn.pixabay.com/photo/2013/08/26/04/44/lions-175934_960_720.jpg";
 
 function cb(){
@@ -165,15 +165,12 @@ function submitForm(form_id) {
 				container.appendChild(img);
 				container.style.width = img.width + "px";
 				img.style.display = "inline";
-				my_comicbubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.90}});
+				myComicBubbles = new ComicBubbles("pict7", {canvas: {readonly: false, fontSize: '20px', opacity: 0.90}});
 				var pixa = pixabay.split("/");
 				if (img.src.indexOf(pixa[pixa.length-1]) > -1) {
-					my_comicbubbles.setFontSize(25).setHeight(76).setWidth(160).setBackground('#8b4513').setColor('#ffffff');
-				}
-				if (my_comicbubbles) {
-					var span = document.getElementById("double-click-span");
-					span.className = "black";
-					setTimeout(function(){ span.removeAttribute("class"); }, 5000);
+          myComicBubbles.onCanvasLoad(function(){
+            this.setFontSize(25).setHeight(76).setWidth(160).setBackground('#8b4513').setColor('#ffffff');
+          });
 				}
 			}
 		}
@@ -284,7 +281,7 @@ function save(comicbubbles_object,updateImage){
 		</form>
 	</div>
 	<div id="result-container" class="empty"></div>
-	<div class="down"><button type="button" id="download1" onclick="save(my_comicbubbles)">download image</button></div>
+	<div class="down"><button type="button" id="download1" onclick="save(myComicBubbles)">download image</button></div>
 </div>
 <?php include 'footer.php'; ?>
 </body>
