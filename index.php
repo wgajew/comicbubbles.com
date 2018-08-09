@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="ComicBubbles is a JavaScript HTML5 canvas library which simplifies the process of adding speech bubbles to photos. ComicBubbles bubbles can be saved as JavaScript objects or merged with the original image.">
 	<meta name="keywords" content="add text to photo, add text to image, caption photo, add caption to image, adding captions to pictures, speech balloon, thought bubble, JavaScript library, html5, dialogue balloons, image, word bubbles, drawing, comic books, comics, adding speech balloons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="comicbubbles.css" rel="stylesheet" >
 </head>
 <body class="ix">
@@ -26,7 +27,7 @@
 			</p>
 			<ul>
 				<li>small size, framework-independent</li>
-				<li>can produce animated speech/thought/scream balloons</li>
+				<li>can produce animated and responsive speech/thought/scream balloons</li>
 				<li>API</li>
 			</ul>
 			</div>
