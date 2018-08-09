@@ -83,7 +83,6 @@ h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15
 .contact form span { color: red; font-size: 17px; }
 .contact h3 { text-align: center; margin: 20px 0 -20px; font: 21px Verdana; color: #3F51B5; }
 .contact form input:nth-of-type(3) { display: none; }
-.contact form { height: calc(100vh - 200px); }
 .tutorial p, #api .main p { color: #000; font-size: 15px; line-height: 1.5; margin: 3px 0; }
 .tutorial p.comic-bubbles-output { color: #fff; }
 .tutorial pre { margin: 10px 0; }
