@@ -74,7 +74,7 @@ pre { -moz-tab-size: 2; -o-tab-size: 2; tab-size: 4; margin: 0; line-height: 1.5
 #saved-image { background: #D5D7E5; margin-left: 2px; }
 #pict5-comic-bubbles-wrapper .clickable { text-decoration: underline; }
 p.error { position: absolute; left: 15px; top: 10px; margin: 0; }
-h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15px 0 15px 10px; margin: 0; color: #989fa5; font-weight: normal; color: #6188a5; }
+h2 { font-family: Open Sans, Verdana; font-size: 27px; padding: 15px 0 15px 10px; margin: 0; color: #989fa5; font-weight: normal; color: #6188a5; line-height: 1; }
 .contact form, .tutorial > div:not(.footer), #api > div:not(.footer) { padding: 20px; margin: 0 auto; color: #788c9e; background: #fff; width: calc(100% - 40px); max-width: 760px; font: 19px Verdana; }
 .tutorial > div:not(.footer) { padding-bottom: 0; }
 .contact form input[type=text], .contact form textarea { font: 19px Verdana; min-width: 400px; width: calc(100% - 20px); border: 1px solid #C8CBD6; color: #788c9e; background: #fff; padding: 10px; margin: 5px 0 12px; }
@@ -257,7 +257,6 @@ h2 { font-family: Open Sans, Verdana; font-size: 27px; height: 26px; padding: 15
   #fifth-demo .right .img, #fifth-demo .right .img img { float: none; margin: auto; }
   #fifth-demo .right #saved-image.img { margin-top: 30px; }
   #fifth-demo .right .img > p { position: static; background: #fff; margin-bottom: 0; width: auto; }
-  h2 { line-height: 1; }
 }
 @media screen and (max-width: 740px) {
   .tutorial > div:not(.footer) { padding: 20px 2px 0; width: calc(100% - 4px); }

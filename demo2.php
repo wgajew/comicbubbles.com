@@ -64,7 +64,7 @@ function which_is(){
       var bubbles = Vegetables.getAllBubbles();
       for (var i = 0; i < bubbles.length; i++) {
       if (bubbles[i].getText() == "click") {
-        bubbles[i].offMouseEvent().setColor("#ff0000").setText("?");
+        bubbles[i].offMouseEvent().setColor("#ff0000").setText("  ?  ");
       }
       }
     }
@@ -207,7 +207,7 @@ Vegetables.onCanvasLoad(function(){
     var bubbles = Vegetables.getAllBubbles();
     for (var i = 0; i < bubbles.length; i++) {
     if (bubbles[i].getText() == "click") {
-      bubbles[i].offMouseEvent().setColor("#ff0000").setText("?");
+      bubbles[i].offMouseEvent().setColor("#ff0000").setText("  ?  ");
     }
     }
   }

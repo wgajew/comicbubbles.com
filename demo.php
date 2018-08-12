@@ -15,7 +15,7 @@ function let_them_talk(){
   DestroyComicBubbles(Friends);
   
 	Friends = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#483d8b', responsive: true}}, {bubble: [
-		{id: 'bub1', text: "Tell us\nmore\n&nbsp;about it&nbsp;", className: 'anna', x: 242, y: 391, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
+		{id: 'bub1', text: "Tell us\nmore\n about it ", className: 'anna', x: 242, y: 391, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
 		{id: 'bub2', text: "I'm not that\ntype of person", className: 'adam', x: 354, y: 279, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
 		{id: 'bub3', text: "He's so\nshy..", className: 'dona', x: 646, y: 25, width: 'auto', height: 'auto', fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
 	]});
@@ -43,8 +43,8 @@ function let_them_talk(){
 var dogCat;
 function dog_cat(){
   dogCat = new ComicBubbles("pict2", {canvas: {responsive: true}}, {bubble: [
-    {id: 'bub2', text: "I am\n&nbsp;a happy&nbsp;\nCAT", className: 'cat', x: 427, y: 336, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#ff4500', color: '#ffffff', readonly: false, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328},
-    {id: 'bub1', text: "I am\n&nbsp;a happy&nbsp;\nDOG", className: 'dog', x: 93, y: 275, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223}
+    {id: 'bub2', text: "I am\n a happy \nCAT", className: 'cat', x: 427, y: 336, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#ff4500', color: '#ffffff', readonly: false, bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328},
+    {id: 'bub1', text: "I am\n a happy \nDOG", className: 'dog', x: 93, y: 275, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223}
   ]});
 }
 var dogAndCat;
@@ -58,16 +58,16 @@ function dog_and_cat(){
   dogAndCat.onCanvasLoad(function(){
     this.setResponsive(true);
     
-    this.addBubble({id: 'bub1', text: "I'm\n&nbsp;a happy&nbsp;\n"+animals[0], className: 'dog', x: 93, y: 275, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
+    this.addBubble({id: 'bub1', text: "I'm\n a happy \n"+animals[0], className: 'dog', x: 93, y: 275, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#ff4500', color: '#ffffff', bubbleStyle: 'speak', tailLocation: 'n', tailX: 138, tailY: 223});
     this.addBubble({id: 'bub2', text: "crazy?", className: 'crazy', x: 342, y: 114, width: 'auto', height: 'auto', fontSize: '17px', textAlign: 'center', lineHeight: 1.3, background: '#483d8b', color: '#ffffff', opacity: 0.85, bubbleStyle: 'think', tailLocation: 's', tailX: 379, tailY: 209, visible: false});
-    this.addBubble({id: 'bub3', text: "I'm\n&nbsp;a happy&nbsp;\n"+animals[10], className: 'cat', x: 427, y: 336, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
+    this.addBubble({id: 'bub3', text: "I'm\n a happy \n"+animals[10], className: 'cat', x: 427, y: 336, width: 'auto', height: 'auto', textAlign: 'center', lineHeight: 1.3, background: '#32cd32', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 413, tailY: 328, visible: false});
 
     var bub1 = this.getBubbleById('bub1');
     var bub2 = this.getBubbleById('bub2');
     var bub3 = this.getBubbleById('bub3');
-    bub1.delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[1], function(){
+    bub1.delay(800).setText("I'm\n a happy \n"+animals[1], function(){
       bub2.fadeIn(1000).delay(2000).fadeOut(1000).remove(function(){ bub3.fadeIn(); });
-    }).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[2]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[3]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[4]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[5]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[6]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[7]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[8]).delay(800).setText("I'm\n&nbsp;a happy&nbsp;\n"+animals[9]).delay(1500, function(){
+    }).delay(800).setText("I'm\n a happy \n"+animals[2]).delay(800).setText("I'm\n a happy \n"+animals[3]).delay(800).setText("I'm\n a happy \n"+animals[4]).delay(800).setText("I'm\n a happy \n"+animals[5]).delay(800).setText("I'm\n a happy \n"+animals[6]).delay(800).setText("I'm\n a happy \n"+animals[7]).delay(800).setText("I'm\n a happy \n"+animals[8]).delay(800).setText("I'm\n a happy \n"+animals[9]).delay(1500, function(){
       bub1.setTailX(142).setTailY(290).moveTo(427,336,'fast').setTailLocation('nw').setTailX(413).setTailY(328).setReadonly(false);
       bub3.setTailX(467).setTailY(347).moveTo(93,275,'fast').setTailLocation('n').setTailX(138).setTailY(223);
     });
@@ -141,7 +141,7 @@ function <button id="btn1" onclick="let_them_talk()">let_them_talk()</button>{
 DestroyComicBubbles(Friends);
 
 Friends = new ComicBubbles("pict1", {canvas: {fontFamily: 'Comic Sans MS', fontSize: '25px', fontWeight: 'bold', textAlign: 'center', lineHeight: 1.5, color: '#483d8b', responsive: true}}, {bubble: [
-  {id: 'bub1', text: "Tell us\nmore\nabout it", className: 'anna', x: 242, y: 391, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
+  {id: 'bub1', text: "Tell us\nmore\n about it ", className: 'anna', x: 242, y: 391, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'nw', tailX: 213, tailY: 340, visible: false},
   {id: 'bub2', text: "I'm not that\ntype of person", className: 'adam', x: 354, y: 279, width: 'auto', height: 'auto', bubbleStyle: 'speak', tailLocation: 'n', tailX: 412, tailY: 216, visible: false},
   {id: 'bub3', text: "He's so\nshy..", className: 'dona', x: 646, y: 25, width: 'auto', height: 'auto', fontSize: '21px', opacity: 0.5, bubbleStyle: 'think', tailLocation: 's', tailX: 695, tailY: 153, visible: false}
 ]});
